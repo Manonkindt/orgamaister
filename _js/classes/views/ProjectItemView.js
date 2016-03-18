@@ -3,6 +3,7 @@ var template = require('../../../_hbs/project_item.hbs');
 var ProjectItemView = Backbone.View.extend({
 	template: template,
 	tagName: 'li',
+	className: 'anim fadeInUp',
 
 	events: {
 		'click .delete': 'clickDelete',
@@ -25,6 +26,8 @@ var ProjectItemView = Backbone.View.extend({
 
 	render: function(){
 		this.$el.html(this.template(this.model.attributes));
+		this.$el.attr('data-wow-delay', 's');
+		this.$el.find('a').addClass('effect-sarah');
 		return this;
 	}
 
