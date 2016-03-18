@@ -1,0 +1,222 @@
+@media (max-width:480px) {	
+
+	//white
+
+	.header.white .lamp {
+		margin-top: -20px;
+		width: 50%;
+	}
+
+	.intro .header aside,
+	.overview .header aside,
+	.dozen .header aside {
+		margin-top: -48px;
+		width: 40px;
+	}
+
+	.intro .header > header {
+		width: 65%;
+	}
+
+	.intro header h1 div, 
+	.overview header h1 div, 
+	.dozen header h1 div,
+	.header.white div {
+		margin: 0 3px;
+		min-width: 7px;
+		min-height: 7px;
+	}
+
+	h1 {
+		max-width: 100%;
+		font-size: 0.7em;
+	}
+
+	form {
+		max-width: 70%;
+		margin-top: -100px;
+		margin-bottom: 0;
+
+		h2 {
+			font-size: 1.9em;
+		}
+
+		span {
+			font-size: 1.2em;
+		}
+
+		.name {
+			height: 40px;
+			margin: 30px 0;
+		}
+	}
+
+	.add {
+		font-size: 2em;
+		border: 3px solid black;
+    	padding: 0px 33px;
+	}
+
+	.filter {
+		height: 40px;
+	}
+
+	.white.form input {
+		padding: 0;
+	}
+
+	input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: #fff;
+	  font-size: 50px;
+	}
+
+	//black
+
+	.lamp {
+		margin-top: -50px;
+		margin-bottom: 20px
+	}
+
+	.intro .boxes, 
+	.overview .boxes, 
+	.dozen .results,
+	.dozen .tagresults {
+		max-width: 70%;
+	}
+
+	//fontsize 
+
+	.intro .boxes .tag li h2, 
+	.dozen .feedback .results .detail li h2 {
+		font-size: 4em;
+	}
+
+	.intro .boxes .tag li h3, 
+	.dozen .feedback .results .detail li h3 {
+    	font-size: 1.3em;
+    	margin-top: 15px;
+	}
+
+	.intro .boxes .tag li p, 
+	.dozen .feedback .results .detail li p {
+    	font-size: 1.5em;
+    	margin-top: 7px;
+    }
+
+	input[placeholder] {
+		font-size: 27px;
+	}
+
+	.intro .boxes .tag li, 
+	.dozen .feedback .results .detail li,
+	.overview .boxes .box li, 
+	.dozen .results li  {
+    	margin: 50px 0;
+	}
+
+	.overview .boxes .box li h2, 
+	.dozen .results li h2 {
+		font-size: 3em;
+	}
+
+	.overview .boxes .box li h3, 
+	.dozen .results li h3 {
+    	font-size: 1.6em;
+    }
+
+    .overview .boxes .box li h3 img, .dozen .results li h3 img {
+    	max-width: 20px;
+
+	}
+
+	.overview header h1 {
+	    margin-top: -70px;
+	    font-size: 0.6em;
+	}
+
+	.overview .boxes .box li h3, 
+	.dozen .results li h3 {
+		padding: 7px 5px;
+	}
+
+	.dozen .tagresults li a {
+	    min-width: 30px;
+	    float: right;
+	    margin-top: 8px;
+	}
+
+	.dozen .tagresults li p {
+    	font-size: 2.3em;
+    }
+
+    .dozen .tagresults li {
+    	padding: 14px 10px;
+    }
+
+    .dozen .header header {
+    	margin-top: -55px;
+    	h1 {
+    		font-size: 0.6em;
+    	}
+    }
+
+    .dozen .tagresults {
+    	margin-top: 50px;
+    }
+
+    .taglist {
+    	height: 40px;
+    	margin-top: 5px;
+    }
+
+    .dozen form,
+    .overview form {
+    	margin-top: -45px;
+    }
+
+    .inputwrapper span.remove {
+	    margin-top: 22px;
+	    padding: 0px 18px 6px 5px;
+	}
+}
+
+@media (min-width:480px) and (max-width: 840px) { 
+	.header.white .lamp {
+		margin-top: -100px;
+		width: 40%;
+	}
+	
+	.intro .boxes, 
+	.overview .boxes, 
+	.dozen .results,
+	.dozen .tagresults,
+	form {
+		max-width: 70%;
+	}
+
+	.intro header h1 {
+		font-size: 0.7em;
+	}
+
+	.header.white div {
+		min-width: 10px;
+		min-height: 10px;
+		margin: 0 7px;
+	}
+
+}
+
+@media (min-width:840px) {
+	.header.white .lamp {
+		margin-top: -200px;
+		width: 40%;
+	}
+}
+
+@media (min-width:1300px) {
+	.header.white .lamp {
+		margin-top: -365px;
+		width: 40%;
+	}
+}
+

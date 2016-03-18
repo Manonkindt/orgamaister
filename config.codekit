@@ -640,35 +640,57 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/42752D90257789C9.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 311,
-		"inputAbbreviatedPath": "\/assets\/42752D90257789C9.png",
-		"outputAbbreviatedPath": "\/assets\/42752D90257789C9.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/bg_image.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 333253,
+		"initialSize": 486181,
 		"inputAbbreviatedPath": "\/assets\/bg_image.jpg",
 		"outputAbbreviatedPath": "\/assets\/bg_image.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/E2B81B46C7620A7B.png": {
-		"fileType": 32768,
+	"\/assets\/bg_image1.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 311,
-		"inputAbbreviatedPath": "\/assets\/E2B81B46C7620A7B.png",
-		"outputAbbreviatedPath": "\/assets\/E2B81B46C7620A7B.png",
+		"initialSize": 5.09858e+06,
+		"inputAbbreviatedPath": "\/assets\/bg_image1.jpg",
+		"outputAbbreviatedPath": "\/assets\/bg_image1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/bg_image2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 533363,
+		"inputAbbreviatedPath": "\/assets\/bg_image2.jpg",
+		"outputAbbreviatedPath": "\/assets\/bg_image2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/bg_image3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 150185,
+		"inputAbbreviatedPath": "\/assets\/bg_image3.jpg",
+		"outputAbbreviatedPath": "\/assets\/bg_image3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/bg_image4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 104707,
+		"inputAbbreviatedPath": "\/assets\/bg_image4.jpg",
+		"outputAbbreviatedPath": "\/assets\/bg_image4.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1151,7 +1173,7 @@
 	"iconImageName": "compass_blue"
 	},
 "projectSettings": {
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoApplyPSLanguageSettingsStyle": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -1305,7 +1327,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/orga.maister.dev",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,

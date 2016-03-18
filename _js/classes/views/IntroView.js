@@ -158,6 +158,9 @@ var IntroView = Backbone.View.extend({
 		this.$el.find('.header').addClass = "white";
 		this.$el.find('.form').addClass = "white";
 
+  		document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image1.jpg')";
+  		document.body.style.backgroundColor = "rgba(110, 59, 59, 0) ";
+
 		this.$el.find('.addButton').hide();
 
 		return this;
