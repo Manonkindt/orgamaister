@@ -58,6 +58,13 @@ class ProjectDAO extends DAO {
 		return $stmt->execute();
 	}
 
+	public function deleteByBox($box_id) {
+		$sql = "DELETE FROM `projects` WHERE `box_id` = :box_id";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':box_id', $box_id);
+		return $stmt->execute();
+	}
+
 	public function update($id, $data) {
 		$errors = $this->getValidationErrors($data);
 		if(empty($errors)) {

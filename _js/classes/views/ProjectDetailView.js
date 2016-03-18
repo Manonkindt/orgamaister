@@ -204,6 +204,23 @@ var ProjectDetailView = Backbone.View.extend({
 	clickDelete: function(e){
 		e.preventDefault();
 		this.model.destroy();
+
+		console.log(this.model.get('id'));
+
+		$.ajax({
+			type:"DELETE",
+			url:window.settings.httpRoot + "api/tags/project/" + this.model.get('id'),
+			success:function(response){
+					if(response){
+						console.log("this went right");
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+						console.log("something is wrong");
+
+					}
+			}
+		});
+
 	},
 
 	initialize: function(options){

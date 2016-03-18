@@ -28,6 +28,19 @@ class TagDAO extends DAO {
 		return []; 
   	}
 
+  	public function deleteByProject($project_id) {
+		$sql = "DELETE FROM `tags` WHERE `project_id` = :project_id";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':project_id', $project_id);
+		return $stmt->execute();
+	}
+
+	public function deleteByBox($box_id) {
+		$sql = "DELETE FROM `tags` WHERE `box_id` = :box_id";
+		$stmt = $this->pdo->prepare($sql);
+		$stmt->bindValue(':box_id', $box_id);
+		return $stmt->execute();
+	}
 
 	public function selectById($id) {
 		$sql = "SELECT * 

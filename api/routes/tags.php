@@ -54,6 +54,18 @@ $app->delete('/tags/:id/?', function($id) use ($tagDAO){
     exit();
 });
 
+$app->delete('/tags/project/:id/?', function($id) use ($tagDAO){
+    header("Content-Type: application/json");
+    echo json_encode($tagDAO->deleteByProject($id));
+    exit();
+});
+
+$app->delete('/tags/box/:id/?', function($id) use ($tagDAO){
+    header("Content-Type: application/json");
+    echo json_encode($tagDAO->deleteByBox($id));
+    exit();
+});
+
 $app->put('/tags/:id/?', function($id) use ($app, $tagDAO){
     header("Content-Type: application/json");
     $post = $app->request->post();

@@ -43,6 +43,12 @@ $app->delete('/projects/:id/?', function($id) use ($projectDAO){
     exit();
 });
 
+$app->delete('/projects/box/:id/?', function($id) use ($projectDAO){
+    header("Content-Type: application/json");
+    echo json_encode($projectDAO->deleteByBox($id));
+    exit();
+});
+
 $app->put('/projects/:id/?', function($id) use ($app, $projectDAO){
     header("Content-Type: application/json");
     $post = $app->request->post();
