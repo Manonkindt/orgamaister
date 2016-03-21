@@ -160,6 +160,8 @@ var IntroView = Backbone.View.extend({
 
   		document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image1.jpg')";
   		document.body.style.backgroundColor = "rgba(110, 59, 59, 0) ";
+  		document.body.style.backgroundRepeat = "no-repeat";
+  		document.body.style.backgroundSize = "cover";
 
 		this.$el.find('.addButton').hide();
 
