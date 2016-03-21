@@ -204,6 +204,10 @@
 		margin: 0 7px;
 	}
 
+	.lamp {
+		margin-top: -25px;
+	}
+
 }
 
 @media (min-width:840px) {
@@ -211,12 +215,20 @@
 		margin-top: -200px;
 		width: 40%;
 	}
+
+	.lamp {
+		margin-top: -25px;
+	}
 }
 
 @media (min-width:1300px) {
 	.header.white .lamp {
 		margin-top: -365px;
 		width: 40%;
+	}
+
+	.lamp {
+		margin-top: -150px;
 	}
 }
 

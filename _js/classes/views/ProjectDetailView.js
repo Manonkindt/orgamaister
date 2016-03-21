@@ -203,7 +203,45 @@ var ProjectDetailView = Backbone.View.extend({
 
 	clickDelete: function(e){
 		e.preventDefault();
-		this.model.destroy();
+
+		document.getElementById("popup").className = "";
+
+		var popup = document.getElementById("popup");
+
+		console.log(popup.getElementsByClassName('go'));
+
+		var deletemodel = this.model;
+
+		popup.getElementsByClassName('go')[0].addEventListener("click", function(a){
+			a.preventDefault();
+			console.log('delete this');
+
+			deletemodel.destroy();
+
+			$.ajax({
+				type:"DELETE",
+				url:window.settings.httpRoot + "api/tags/project/" + deletemodel.get('id'),
+				success:function(response){
+					if(response){
+						console.log("this went right");
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+						console.log("something is wrong");
+	
+					}
+				}
+			});
+
+			document.getElementById("popup").className = "hidden";
+
+		});
+	
+		popup.getElementsByClassName('no')[0].addEventListener("click", function(o){
+			o.preventDefault();
+			console.log('do nothing');
+			document.getElementById("popup").className = "hidden";
+		});
+		// this.model.destroy();
 
 	},
 

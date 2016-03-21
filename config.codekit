@@ -628,7 +628,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 5.09858e+06,
+		"initialSize": 171241,
 		"inputAbbreviatedPath": "\/assets\/bg_image1.jpg",
 		"outputAbbreviatedPath": "\/assets\/bg_image1.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -686,6 +686,17 @@
 		"initialSize": 668656,
 		"inputAbbreviatedPath": "\/assets\/bg_image6.jpg",
 		"outputAbbreviatedPath": "\/assets\/bg_image6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/bg_image7.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5.09858e+06,
+		"inputAbbreviatedPath": "\/assets\/bg_image7.jpg",
+		"outputAbbreviatedPath": "\/assets\/bg_image7.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

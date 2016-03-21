@@ -58,6 +58,7 @@ body {
   font-weight: 400;
   height: auto;
   min-height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -87,6 +88,9 @@ html {
   overflow-x: hidden !important;
   margin: auto;
   height: 100%; }
+
+.intro .white {
+  max-height: 100%; }
 
 .intro .header,
 .overview .header,
@@ -142,7 +146,6 @@ h2 span {
   margin-top: 40px; }
 
 .lamp {
-  margin-top: -100px;
   width: 75%;
   transition: 0.5s; }
 
@@ -191,10 +194,6 @@ h2 span {
 header {
   margin-bottom: 20px; }
 
-.hidden,
-.hiddenbutton {
-  display: none; }
-
 .feedback .field {
   margin: 30px 20px; }
 
@@ -204,9 +203,6 @@ header {
 
 .dozen h3 {
   display: block; }
-
-.hidden {
-  display: none; }
 
 .results {
   clear: both;
@@ -241,7 +237,11 @@ em {
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
-  overflow-x: scroll; }
+  overflow-x: scroll;
+  text-decoration: none;
+  border: none; }
+  .taglist::-webkit-scrollbar {
+    display: none; }
   .taglist li {
     height: 100%;
     display: flex;
@@ -409,6 +409,49 @@ li {
 
 .feedback ul {
   margin-top: 20px; }
+
+#popup {
+  position: absolute;
+  z-index: 999;
+  min-width: 100%;
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  vertical-align: middle;
+  text-align: center; }
+  #popup div {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    margin-top: 50%; }
+    #popup div h2 {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 2em;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      color: #000;
+      z-index: 45;
+      font-family: vollkornregular;
+      pointer-events: none;
+      height: 30%;
+      margin-top: 30px;
+      margin-bottom: 20px; }
+    #popup div a {
+      font-family: vollkornsemibold;
+      text-decoration: none;
+      color: #000;
+      font-size: 3em;
+      text-transform: uppercase;
+      margin: 0 20px; }
+    #popup div a:hover {
+      color: #5cd8af; }
+
+.hidden,
+.hiddenbutton {
+  display: none; }
 
 .intro .boxes,
 .overview .boxes,
@@ -681,12 +724,21 @@ li {
   .header.white div {
     min-width: 10px;
     min-height: 10px;
-    margin: 0 7px; } }
+    margin: 0 7px; }
+
+  .lamp {
+    margin-top: -25px; } }
 @media (min-width: 840px) {
   .header.white .lamp {
     margin-top: -200px;
-    width: 40%; } }
+    width: 40%; }
+
+  .lamp {
+    margin-top: -25px; } }
 @media (min-width: 1300px) {
   .header.white .lamp {
     margin-top: -365px;
-    width: 40%; } }
+    width: 40%; }
+
+  .lamp {
+    margin-top: -150px; } }

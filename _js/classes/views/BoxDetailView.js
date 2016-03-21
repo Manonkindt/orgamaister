@@ -60,35 +60,60 @@ var BoxDetailView = Backbone.View.extend({
 
 	clickDelete: function(e){
 		e.preventDefault();
-		this.model.destroy();
 
-		$.ajax({
-			type:"DELETE",
-			url:window.settings.httpRoot + "api/projects/box/" + this.model.get('id'),
-			success:function(response){
-				if(response){
-					console.log("this went right");
-					// window.Application.navigate("home", {trigger: true});
-				} else {
-					console.log("something is wrong");
+		document.getElementById("popup").className = "";
 
+		var popup = document.getElementById("popup");
+
+		console.log(popup.getElementsByClassName('go'));
+
+		var deletemodel = this.model;
+
+		popup.getElementsByClassName('go')[0].addEventListener("click", function(a){
+			a.preventDefault();
+			console.log('delete this');
+
+			deletemodel.destroy();
+
+			$.ajax({
+				type:"DELETE",
+				url:window.settings.httpRoot + "api/projects/box/" + deletemodel.get('id'),
+				success:function(response){
+					if(response){
+						console.log("this went right");
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+						console.log("something is wrong");
+	
+					}
 				}
-			}
+			});
+	
+			$.ajax({
+				type:"DELETE",
+				url:window.settings.httpRoot + "api/tags/box/" + deletemodel.get('id'),
+				success:function(response){
+					if(response){
+						console.log("this went right");
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+						console.log("something is wrong");
+	
+					}
+				}
+			});
+
+			document.getElementById("popup").className = "hidden";
+			location.reload();
+
+		});
+	
+		popup.getElementsByClassName('no')[0].addEventListener("click", function(o){
+			o.preventDefault();
+			console.log('do nothing');
+			document.getElementById("popup").className = "hidden";
 		});
 
-		$.ajax({
-			type:"DELETE",
-			url:window.settings.httpRoot + "api/tags/box/" + this.model.get('id'),
-			success:function(response){
-				if(response){
-					console.log("this went right");
-					// window.Application.navigate("home", {trigger: true});
-				} else {
-					console.log("something is wrong");
-
-				}
-			}
-		});
 	},
 
 	initialize: function(options){
@@ -141,6 +166,7 @@ var BoxDetailView = Backbone.View.extend({
 
 	render: function(){
 		this.$el.html(this.template(this.model.attributes));
+
 		this.$tag = this.$el.find('.tagresults');
 		this.$project = this.$el.find('.results');
 
