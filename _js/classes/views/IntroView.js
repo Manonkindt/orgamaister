@@ -158,8 +158,17 @@ var IntroView = Backbone.View.extend({
 		this.$el.find('.header').addClass = "white";
 		this.$el.find('.form').addClass = "white";
 
-  		document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image1.jpg')";
-  		document.body.style.backgroundColor = "rgba(110, 59, 59, 0) ";
+  		var mq = window.matchMedia( "(min-width: 840px)" );
+
+		if(mq.matches) {
+			console.log('at least 840px');
+		    document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image.jpg')";
+		} else {
+			console.log('smaller than 840px');
+			document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image1.jpg')";
+		}
+
+		document.body.style.backgroundColor = "rgba(0, 0, 0, 0) ";
   		document.body.style.backgroundRepeat = "no-repeat";
   		document.body.style.backgroundSize = "cover";
 

@@ -624,6 +624,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/bg_image.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 124968,
+		"inputAbbreviatedPath": "\/assets\/bg_image.jpg",
+		"outputAbbreviatedPath": "\/assets\/bg_image.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/bg_image1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -650,7 +661,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 150185,
+		"initialSize": 150886,
 		"inputAbbreviatedPath": "\/assets\/bg_image3.jpg",
 		"outputAbbreviatedPath": "\/assets\/bg_image3.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -664,17 +675,6 @@
 		"initialSize": 104707,
 		"inputAbbreviatedPath": "\/assets\/bg_image4.jpg",
 		"outputAbbreviatedPath": "\/assets\/bg_image4.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/bg_image5.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 124968,
-		"inputAbbreviatedPath": "\/assets\/bg_image5.jpg",
-		"outputAbbreviatedPath": "\/assets\/bg_image5.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

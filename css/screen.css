@@ -66,6 +66,7 @@ body {
   line-height: 33px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   transition: background-color 1s; }
 
 body:before {
@@ -150,10 +151,25 @@ h2 span {
   transition: 0.5s; }
 
 .header.white {
+  position: relative;
   color: white; }
   .header.white .lamp {
     margin-top: -25px;
-    width: 100%; }
+    width: 100%;
+    z-index: 20;
+    top: 0; }
+  .header.white .blur {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    border-radius: 50%;
+    width: 30%;
+    height: 100%;
+    margin-left: 10%;
+    z-index: -3;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    -webkit-filter: blur(55px);
+    -webkit-transition: -webkit-filter .5s; }
   .header.white div {
     background-color: white;
     min-width: 20px;

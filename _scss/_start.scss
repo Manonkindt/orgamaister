@@ -20,6 +20,7 @@ body {
   line-height: 33px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   transition: background-color 1s;
 }
 
@@ -116,10 +117,28 @@ h2 span {
 }
 
 .header.white {
+  position: relative;
 
   .lamp {
     margin-top: -25px;
     width: 100%;
+    z-index: 20;
+    // position: absolute;
+    top: 0;
+  }
+
+  .blur {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    border-radius: 50%;
+    width: 30%;
+    height: 100%;
+    margin-left: 10%;
+    z-index: -3;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    -webkit-filter: blur(55px);
+    -webkit-transition: -webkit-filter .5s;
   }
 
   color: white;
@@ -492,6 +511,7 @@ li {
     }
   }
 }
+
 
 .hidden,
 .hiddenbutton {
