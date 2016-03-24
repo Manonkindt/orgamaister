@@ -646,17 +646,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/bg_image2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 533363,
-		"inputAbbreviatedPath": "\/assets\/bg_image2.jpg",
-		"outputAbbreviatedPath": "\/assets\/bg_image2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/bg_image3.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -664,39 +653,6 @@
 		"initialSize": 150886,
 		"inputAbbreviatedPath": "\/assets\/bg_image3.jpg",
 		"outputAbbreviatedPath": "\/assets\/bg_image3.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/bg_image4.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 104707,
-		"inputAbbreviatedPath": "\/assets\/bg_image4.jpg",
-		"outputAbbreviatedPath": "\/assets\/bg_image4.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/bg_image6.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 668656,
-		"inputAbbreviatedPath": "\/assets\/bg_image6.jpg",
-		"outputAbbreviatedPath": "\/assets\/bg_image6.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/bg_image7.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5.09858e+06,
-		"inputAbbreviatedPath": "\/assets\/bg_image7.jpg",
-		"outputAbbreviatedPath": "\/assets\/bg_image7.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

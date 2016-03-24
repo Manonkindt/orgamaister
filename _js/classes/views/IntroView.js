@@ -158,19 +158,16 @@ var IntroView = Backbone.View.extend({
 		this.$el.find('.header').addClass = "white";
 		this.$el.find('.form').addClass = "white";
 
-  		var mq = window.matchMedia( "(min-width: 840px)" );
-
-		if(mq.matches) {
-			console.log('at least 840px');
-		    document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image.jpg')";
-		} else {
-			console.log('smaller than 840px');
-			document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image1.jpg')";
-		}
+  		document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image.jpg')";
 
 		document.body.style.backgroundColor = "rgba(0, 0, 0, 0) ";
   		document.body.style.backgroundRepeat = "no-repeat";
   		document.body.style.backgroundSize = "cover";
+
+
+		$( window ).load(function() {
+        	$('.blur').removeClass('hidden');
+    	});
 
 		this.$el.find('.addButton').hide();
 
