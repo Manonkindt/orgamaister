@@ -24,6 +24,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/_js\/classes\/collections\/min\/ProjectCollection-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_js\/classes\/collections\/min\/ProjectCollection-min.js",
+		"outputAbbreviatedPath": "\/_js\/classes\/collections\/min\/min\/ProjectCollection-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/_js\/classes\/collections\/min\/TagCollection-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_js\/classes\/collections\/min\/TagCollection-min.js",
+		"outputAbbreviatedPath": "\/_js\/classes\/collections\/min\/min\/TagCollection-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/_js\/classes\/collections\/ProjectCollection.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -52,6 +74,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_js\/classes\/models\/Box.js",
 		"outputAbbreviatedPath": "\/_js\/classes\/models\/min\/Box-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/_js\/classes\/models\/min\/Tag-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_js\/classes\/models\/min\/Tag-min.js",
+		"outputAbbreviatedPath": "\/_js\/classes\/models\/min\/min\/Tag-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

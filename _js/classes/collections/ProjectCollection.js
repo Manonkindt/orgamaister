@@ -8,13 +8,11 @@ var ProjectCollection = Backbone.Collection.extend({
 	initialize: function(options){
 		if(options){
 			this.box_id = options.box_id;
-			console.log(options);
 		}
 	},
 
 	filterTags: function(query){
 		pattern = new RegExp("(?=.*" + query.replace(/ +/g, ")(?=.*") + ").*", "g");
-		console.log(pattern);
 		return this.filter(function(tag){
 			return pattern.test(tag.get('tags_list').toLowerCase());
 		});
