@@ -41,12 +41,9 @@ var BoxDetailView = Backbone.View.extend({
 		}, {
 			success: function(response){
 				var test = projeeect.models[projeeect.models.length-1];
-				console.log(test);
 		
 				$.map(test.attributes, function(val, key) { 
-					console.log(key + ', ' + val); 
 					if(key === 'id'){
-						console.log(val);
 					}
 				}); //returns ["val1", "val2"]
 		
@@ -65,13 +62,10 @@ var BoxDetailView = Backbone.View.extend({
 
 		var popup = document.getElementById("popup");
 
-		console.log(popup.getElementsByClassName('go'));
-
 		var deletemodel = this.model;
 
 		popup.getElementsByClassName('go')[0].addEventListener("click", function(a){
 			a.preventDefault();
-			console.log('delete this');
 
 			deletemodel.destroy();
 
@@ -80,10 +74,8 @@ var BoxDetailView = Backbone.View.extend({
 				url:window.settings.httpRoot + "api/projects/box/" + deletemodel.get('id'),
 				success:function(response){
 					if(response){
-						console.log("this went right");
 						// window.Application.navigate("home", {trigger: true});
 					} else {
-						console.log("something is wrong");
 	
 					}
 				}
@@ -94,10 +86,8 @@ var BoxDetailView = Backbone.View.extend({
 				url:window.settings.httpRoot + "api/tags/box/" + deletemodel.get('id'),
 				success:function(response){
 					if(response){
-						console.log("this went right");
 						// window.Application.navigate("home", {trigger: true});
 					} else {
-						console.log("something is wrong");
 	
 					}
 				}
@@ -110,7 +100,6 @@ var BoxDetailView = Backbone.View.extend({
 	
 		popup.getElementsByClassName('no')[0].addEventListener("click", function(o){
 			o.preventDefault();
-			console.log('do nothing');
 			document.getElementById("popup").className = "hidden";
 		});
 

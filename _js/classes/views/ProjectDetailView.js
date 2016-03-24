@@ -35,8 +35,6 @@ var ProjectDetailView = Backbone.View.extend({
 
     	if (e.keyCode == 32 && this.$el.find('.text').val() !== "") {
 
-    		console.log(input);
-
     		if(input !== " " || input !== "" || input !== undefined){
     			this.array.push(input);
     		}
@@ -84,8 +82,6 @@ var ProjectDetailView = Backbone.View.extend({
 		var energy = this.array.join();
 		var res = energy.split(' ');
 
-		console.log(res);
-
 		allIds = document.getElementsByClassName('item inputwrapper');
 
 		var newArray = [];
@@ -95,21 +91,16 @@ var ProjectDetailView = Backbone.View.extend({
 
 		for (var i = 0; i < allIds.length; i++) {
 			allIds[i].setAttribute('id', i);
-			console.log(allIds[i]);
 			newArray.push(allIds[i].getElementsByTagName('span')[0].innerHTML);
 		}
 
 		this.array = newArray;
-		console.log('array ' + this.array);
 
 	},
 
 	clickAdd: function(e){
 
 		e.preventDefault();
-
-		console.log(document.getElementsByClassName('item inputwrapper').length, this.$el.find('.text').val());
-
 		if(this.$el.find('.text').val() === "" && document.getElementsByClassName('item inputwrapper').length === 0 || this.$el.find('.text').val() === " " && document.getElementsByClassName('item inputwrapper').length === 0){
 			return;
 		}
@@ -124,7 +115,6 @@ var ProjectDetailView = Backbone.View.extend({
 		}
 
 		if ( this.$el.find('.text').val() === " " ) {
-			console.log('gow jong');
 		} else if(this.$el.find('.text').val() !== "") {
 			test.push($('.addtags .text').val());
 		}
@@ -193,10 +183,8 @@ var ProjectDetailView = Backbone.View.extend({
 		e.preventDefault();
 
 		var removable = e.currentTarget.parentNode.getElementsByTagName('p')[0].innerHTML;
-		console.log(removable);
 
 		var newTagsList = this.model.get('tags_list').replace(', ' + removable,'');
-		console.log(newTagsList);
 		this.model.set('tags_list', newTagsList);
 		this.model.save();
 	},
@@ -208,13 +196,11 @@ var ProjectDetailView = Backbone.View.extend({
 
 		var popup = document.getElementById("popup");
 
-		console.log(popup.getElementsByClassName('go'));
 
 		var deletemodel = this.model;
 
 		popup.getElementsByClassName('go')[0].addEventListener("click", function(a){
 			a.preventDefault();
-			console.log('delete this');
 
 			deletemodel.destroy();
 
@@ -223,10 +209,8 @@ var ProjectDetailView = Backbone.View.extend({
 				url:window.settings.httpRoot + "api/tags/project/" + deletemodel.get('id'),
 				success:function(response){
 					if(response){
-						console.log("this went right");
 						// window.Application.navigate("home", {trigger: true});
 					} else {
-						console.log("something is wrong");
 	
 					}
 				}
@@ -238,7 +222,6 @@ var ProjectDetailView = Backbone.View.extend({
 	
 		popup.getElementsByClassName('no')[0].addEventListener("click", function(o){
 			o.preventDefault();
-			console.log('do nothing');
 			document.getElementById("popup").className = "hidden";
 		});
 		// this.model.destroy();
@@ -246,8 +229,6 @@ var ProjectDetailView = Backbone.View.extend({
 	},
 
 	initialize: function(options){
-
-		console.log(options);
 
 		if(options && options.id){
 			this.model = new Project();

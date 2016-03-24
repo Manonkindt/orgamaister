@@ -41,12 +41,9 @@ var OverviewView = Backbone.View.extend({
 		}, {
 			success: function(response){
 				var test = collect.models[collect.models.length-1];
-				console.log(test);
 		
 				$.map(test.attributes, function(val, key) { 
-					console.log(key + ', ' + val); 
 					if(key === 'id'){
-						console.log(val);
 					}
 				}); //returns ["val1", "val2"]
 		
