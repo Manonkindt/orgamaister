@@ -21,7 +21,6 @@ var IntroView = Backbone.View.extend({
 	array: [],
 
 	goHome: function(e){
-		console.log('go home');
 		Window.Application.navigate("intro" , {trigger: true});
 		location.reload();
 	},
@@ -167,6 +166,12 @@ var IntroView = Backbone.View.extend({
 
 		$( window ).load(function() {
         	$('.blur').removeClass('hidden');
+    	});
+
+		$test = this.$el;
+
+    	$( document ).ready(function() {
+        	$test.find('.blur').removeClass('hidden');
     	});
 
 		this.$el.find('.addButton').hide();
