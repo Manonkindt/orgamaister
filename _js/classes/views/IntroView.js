@@ -159,7 +159,7 @@ var IntroView = Backbone.View.extend({
 
   		document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image.jpg')";
 
-		document.body.style.backgroundColor = "rgba(0, 0, 0, 0) ";
+		document.body.style.backgroundColor = "rgba(0, 0, 0, 1) ";
   		document.body.style.backgroundRepeat = "no-repeat";
   		document.body.style.backgroundSize = "cover";
 
