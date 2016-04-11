@@ -51,6 +51,7 @@ html {
 
 .intro,
 .overview,
+.listview,
 .dozen {
   .header {
     padding: 0;
@@ -70,13 +71,44 @@ html {
     aside,
     header {
       padding: 5px;
-      margin-top: 10px;
+      margin-top: 16px;
       width: 50%;
       
       line-height: 150px;
       font-weight: bold;
       font-size: 3em;
       text-align: center;
+    }
+  }
+}
+
+.tags, .feedback, .overview, .listview {
+  .optionHeader {
+    margin-top: 230px;
+    margin-bottom: -22px;
+
+    max-width: 700px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+    h1 {
+      border-bottom: 3px solid black;
+      font-size: 4.8em;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      font-family: vollkornregular;
+      color: black;
+
+      span {
+         color: $blue;
+      }
+    }
+
+    hr {
+        width: 100%;
+        border-bottom: 0px solid rgba(0, 0, 0, 0.6);
     }
   }
 }
@@ -97,13 +129,18 @@ h2 span {
 }
 
 .dozen .detail,
+.dozen .listdetail,
 .intro .tagdetail,
+.intro .listdetail,
+.listview .boxes .detail, 
+.listview .boxes .tagdetail,
 .overview .lamp {
   display: none;
 }
 
 .intro .header aside,
 .overview .header aside,
+.listview .header aside,
 .dozen .header aside {
   width: 100px;
   height: 100px;
@@ -141,32 +178,33 @@ h2 span {
     -webkit-transition: -webkit-filter .5s;
   }
 
-  color: white;
+  color: black;
 
   div {
-    background-color: white;
+    background-color: black;
     min-width: 20px;
     min-height: 20px;
   }
 }
 
-.white.form {
-  position: relative;
-  z-index: 999;
-}
+// .white.form {
+//   position: relative;
+//   z-index: 999;
+// }
 
-.white.form input {
-  border: 2px solid white;
-  background-color: rgba(255, 255, 255, 0.2);
-}
+// .white.form input {
+//   border: 2px solid white;
+//   background-color: rgba(255, 255, 255, 0.2);
+// }
 
-.white.form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #fff;
-  font-size: 50px;
-  padding-left: 14px;
-}
+// .white.form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+//   color: #fff;
+//   font-size: 50px;
+//   padding-left: 14px;
+// }
 
 .intro header h1,
+.listview header h1,
 .overview header h1,
 .dozen header h1 {
   display: flex;
@@ -190,7 +228,8 @@ h2 span {
   margin-top: -180px;
 }
 
-.overview header h1 {
+.overview header h1,
+.listview header h1 {
   margin-top: -10px;
 }
 
@@ -309,25 +348,25 @@ em {
 
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: $grey;
-  font-size: 50px;
+  font-size: 45px;
   padding-left: 14px;
 }
 
 input::-moz-placeholder { /* Firefox 19+ */
   color: $grey;
-  font-size: 40px;
+  font-size: 45px;
   padding-left: 14px;
 }
 
 input:-ms-input-placeholder { /* IE 10+ */
   color: $grey;
-  font-size: 40px;
+  font-size: 45px;
   padding-left: 14px;
 }
 
 input[placeholder] { 
   color: $grey;
-  font-size: 40px;
+  font-size: 45px;
   padding-left: 14px; 
 }
 ::-moz-placeholder { 
@@ -338,13 +377,13 @@ input[placeholder] {
 
 input:-moz-placeholder { 
   color: $grey;
-  font-size: 40px;
+  font-size: 45px;
   padding-left: 14px;
 }
 
 input:-moz-placeholder { /* Firefox 18- */
   color: $grey;
-  font-size: 40px;
+  font-size: 45px;
   padding-left: 14px;
 }
 
@@ -420,13 +459,16 @@ form {
   margin-right: auto;
   max-width: 700px;
   margin-bottom: 95px;
-  margin-top: 0px;
+  margin-top: -21px;
+  position: relative;
+  z-index: 15000;
 
   h2 {
     border-bottom: 3px solid black;
     font-size: 4.7em;
     padding-bottom: 10px;
-    font-family: vollkornsemibold;
+    text-transform: uppercase;
+    font-family: vollkornregular;
   }
 
   .name {
@@ -434,6 +476,10 @@ form {
     width: 100%;
     height: 75px;
   }
+}
+
+.overview form {
+  margin-top: 0px !important;
 }
 
 .add {
@@ -518,9 +564,28 @@ li {
   }
 }
 
+.scroll_down {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 40px;
+  width: 190px;
+  left: 50%;
+  margin-left: -20px;
+  position: fixed;
+  bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
 
 .hidden,
 .hiddenbutton {
   //visibility: hidden;
   display: none;
+}
+
+.header h1.home {
+  cursor: pointer;
 }

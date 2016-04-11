@@ -123,6 +123,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/_js\/classes\/routers\/min\/Application-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_js\/classes\/routers\/min\/Application-min.js",
+		"outputAbbreviatedPath": "\/_js\/classes\/routers\/min\/min\/Application-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/_js\/classes\/views\/BoxDetailView.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -156,6 +167,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/_js\/classes\/views\/ListView.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_js\/classes\/views\/ListView.js",
+		"outputAbbreviatedPath": "\/_js\/classes\/views\/min\/ListView-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/_js\/classes\/views\/min\/BoxDetailView-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -184,6 +206,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_js\/classes\/views\/min\/IntroView-min.js",
 		"outputAbbreviatedPath": "\/_js\/classes\/views\/min\/min\/IntroView-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/_js\/classes\/views\/min\/ListView-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_js\/classes\/views\/min\/ListView-min.js",
+		"outputAbbreviatedPath": "\/_js\/classes\/views\/min\/min\/ListView-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -788,6 +821,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/lamp.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12848,
+		"inputAbbreviatedPath": "\/assets\/lamp.png",
+		"outputAbbreviatedPath": "\/assets\/lamp.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/assets\/lamp_white.png": {
 		"fileType": 32768,

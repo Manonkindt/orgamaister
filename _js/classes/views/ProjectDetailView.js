@@ -15,7 +15,8 @@ var ProjectDetailView = Backbone.View.extend({
 		'click .remove': 'clickRemove',
 		'click .add': 'clickAdd',
 		'keydown .text': 'addTags',
-		'click .home': 'goHome'
+		'click .home': 'goHome',
+		'click .gotomybox': 'gotomybox'
 
 	},
 
@@ -28,6 +29,10 @@ var ProjectDetailView = Backbone.View.extend({
 		location.reload();
 	},
 
+	gotomybox: function(e) {
+		e.preventDefault();
+		Window.Application.navigate("boxes/" + this.model.get('box_id'), {trigger: true});
+	},
 
 	addTags: function(e){
 

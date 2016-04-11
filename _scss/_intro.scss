@@ -1,5 +1,6 @@
 .intro .boxes,
 .overview .boxes,
+.listview .boxes,
 .dozen .results {
 	display: block;
 	margin-right: auto;
@@ -20,7 +21,8 @@
 }
 
 .intro .boxes .tag li,
-.dozen .feedback .results .detail li {
+.dozen .feedback .results .detail li,
+.listview .boxes .box li {
 
 	margin: 90px 0;
 
@@ -48,6 +50,20 @@
 		color: $grey;
 		font-family: vollkornregular;
 	}
+}
+
+.listview .optionHeader {
+
+	h1 {
+		color: $blue;
+	}
+	margin-top: 0px;
+	margin-bottom: 130px;
+}
+
+.listview .boxes .box li span {
+	text-transform: uppercase;
+	margin-right: 10px;
 }
 
 .overview .boxes .box li,

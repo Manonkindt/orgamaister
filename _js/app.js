@@ -47,7 +47,6 @@ fallback.ready(function(){
 
 var Handlebars = require("hbsfy/runtime");
 
-
 function init() {
 	$.getJSON('settings.php').done(function(result){
 		window.settings = result;
@@ -55,6 +54,7 @@ function init() {
 		Window.Application = new Application();
 		Backbone.history.start();
 	});
+
 }
 
 init();

@@ -8,7 +8,8 @@ var ProjectItemView = Backbone.View.extend({
 	events: {
 		'click .delete': 'clickDelete',
 		'click .tagdetail': 'clickDetail',
-		'click .detail': 'clickDetail'
+		'click .detail': 'clickDetail',
+		'click .listdetail': 'clickDetail',
 	},
 
 	clickDelete: function(e){

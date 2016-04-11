@@ -15,14 +15,14 @@ var IntroView = Backbone.View.extend({
 	events: {
 		'click .addButton': 'clickAdd',
 		'input .filter': 'inputFilter',
-		'click .home': 'goHome'
+		'click .list': 'gotolist'
 	},
 
 	array: [],
 
-	goHome: function(e){
-		Window.Application.navigate("intro" , {trigger: true});
-		location.reload();
+	gotolist: function(e){
+		e.preventDefault();
+		Window.Application.navigate("list" , {trigger: true});
 	},
 
 	inputFilter: function(e){
@@ -36,10 +36,9 @@ var IntroView = Backbone.View.extend({
 			document.body.style.background = "rgba(255,255,255,1)";
 
 			// this.$el.find('.white').hide();
-			this.$el.find('.white').removeClass("white");
-			this.$el.find('.lamp').attr("src", "assets/lamp.svg");
-
-			this.$el.find('.addButton').show();
+			// this.$el.find('.white').removeClass("white");
+			this.$el.find('.lamp').css("width", "20%");
+			this.$el.find('.lamp').css("margin-top", "-167px");
 
 			var inputs = input.split(" ");
 			this.renderFilteredTags(this.projectcollection.filterTags(input));
@@ -54,6 +53,8 @@ var IntroView = Backbone.View.extend({
 
 		} else {
 			// this.$el.find('.box').show();
+			this.$el.find('.lamp').css("width", "40%");
+			this.$el.find('.lamp').css("margin-top", "-365px");
 			this.$el.find('.addbox').show();
 			this.$el.find('.tag').hide();
 			this.array = [];
@@ -81,11 +82,17 @@ var IntroView = Backbone.View.extend({
 		this.projectcollection = new ProjectCollection();
 		this.listenTo(this.projectcollection, 'sync', this.renderTags);
 		this.projectcollection.fetch();
+		$(window).scroll(this.detect_scroll);
+
 	},
 
 	onlyUnique: function(value, index, self) { 
     	return self.indexOf(value) === index;
 	},
+
+	detect_scroll: function() {
+    	console.log('detected');
+  	},	
 
 	renderStudents: function(){
 		this.$students.empty();
@@ -156,26 +163,6 @@ var IntroView = Backbone.View.extend({
 		// this.$el.find('.white').css('display', 'flex');
 		this.$el.find('.header').addClass = "white";
 		this.$el.find('.form').addClass = "white";
-
-  		document.body.style.backgroundImage = "url('" + window.settings.httpRoot + "assets/bg_image.jpg')";
-
-		document.body.style.backgroundColor = "rgba(0, 0, 0, 1) ";
-  		document.body.style.backgroundRepeat = "no-repeat";
-  		document.body.style.backgroundSize = "cover";
-
-
-		$( window ).load(function() {
-        	$('.blur').removeClass('hidden');
-    	});
-
-		$test = this.$el;
-
-    	$( document ).ready(function() {
-        	$test.find('.blur').removeClass('hidden');
-    	});
-
-		this.$el.find('.addButton').hide();
-
 		return this;
 
 	}

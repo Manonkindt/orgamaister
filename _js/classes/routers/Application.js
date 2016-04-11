@@ -2,11 +2,15 @@ var OverviewView = require('../views/OverviewView.js');
 var BoxDetailView = require('../views/BoxDetailView.js');
 var ProjectDetailView = require('../views/ProjectDetailView.js');
 var IntroView = require('../views/IntroView.js');
+var ListView = require('../views/ListView.js');
+var topPos = $(window).scrollTop();
+
 var Application = Backbone.Router.extend({
 
 	routes: {
 		"overview":"overview",
 		"intro":"intro",
+		"list":"list",
 		"boxes/:id":"boxes",
 		"projects/:id":"projects",
 		"*actions":"default"
@@ -20,10 +24,37 @@ var Application = Backbone.Router.extend({
 		this.navigate('intro', {trigger: true});
 	},
 
+	list: function(){
+		this.empty();
+		this.list = new ListView();
+		$('.container').append(this.list.render().el);
+	},
+
 	overview: function(){
 		this.empty();
 		this.overview = new OverviewView();
 		$('.container').append(this.overview.render().el);
+		$('.container').scroll(function() {
+            console.log('checkScroll');
+
+        	var currentScrollPos = $('.container').scrollTop();
+
+        	console.log(this.topPos, currentScrollPos);
+
+			if(this.topPos > currentScrollPos) {
+				console.log('scroll up');
+			} else {
+				console.log('scroll down');
+				$('.scroll_down').addClass('hidden');
+			}
+	
+			this.topPos = currentScrollPos;
+
+			if(currentScrollPos == 0) {
+				$('.scroll_down').removeClass('hidden');
+			}
+
+		});
 	},
 
 	intro: function() {
@@ -38,6 +69,27 @@ var Application = Backbone.Router.extend({
 			id: id
 		});
 		$('.container').append(this.box.render().el);
+		$('.container').scroll(function() {
+            console.log('checkScroll');
+
+        	var currentScrollPos = $('.container').scrollTop();
+
+        	console.log(this.topPos, currentScrollPos);
+
+			if(this.topPos > currentScrollPos) {
+				console.log('scroll up');
+			} else {
+				console.log('scroll down');
+				$('.scroll_down').addClass('hidden');
+			}
+	
+			this.topPos = currentScrollPos;
+
+			if(currentScrollPos == 0) {
+				$('.scroll_down').removeClass('hidden');
+			}
+
+		});
 	},
 
 	projects: function(id){
@@ -46,6 +98,27 @@ var Application = Backbone.Router.extend({
 			id: id
 		});
 		$('.container').append(this.project.render().el);
+		$('.container').scroll(function() {
+            console.log('checkScroll');
+
+        	var currentScrollPos = $('.container').scrollTop();
+
+        	console.log(this.topPos, currentScrollPos);
+
+			if(this.topPos > currentScrollPos) {
+				console.log('scroll up');
+			} else {
+				console.log('scroll down');
+				$('.scroll_down').addClass('hidden');
+			}
+	
+			this.topPos = currentScrollPos;
+
+			if(currentScrollPos == 0) {
+				$('.scroll_down').removeClass('hidden');
+			}
+
+		});
 	}
 
 });

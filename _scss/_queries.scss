@@ -9,8 +9,9 @@
 
 	.intro .header aside,
 	.overview .header aside,
+	.listview .header aside,
 	.dozen .header aside {
-		margin-top: -48px;
+		margin-top: -49px;
 		width: 40px;
 	}
 
@@ -20,6 +21,7 @@
 
 	.intro header h1 div, 
 	.overview header h1 div, 
+	.listview header h1 div,
 	.dozen header h1 div,
 	.header.white div {
 		margin: 0 3px;
@@ -51,6 +53,24 @@
 		}
 	}
 
+	.tags .optionHeader, .feedback .optionHeader, .overview .optionHeader {
+		max-width: 70%;
+		margin-top: 80px;
+
+		h1 {
+			font-size: 1.9em;
+		}
+
+	}
+
+	.listview .optionHeader {
+		margin-top: -40px;
+		max-width: 70%;
+		h1 {
+			font-size: 1.9em;
+		}
+	}
+
 	.add {
 		font-size: 2em;
 		border: 3px solid black;
@@ -79,6 +99,7 @@
 
 	.intro .boxes, 
 	.overview .boxes, 
+	.listview .boxes,
 	.dozen .results,
 	.dozen .tagresults {
 		max-width: 70%;
@@ -109,32 +130,38 @@
 
 	.intro .boxes .tag li, 
 	.dozen .feedback .results .detail li,
-	.overview .boxes .box li, 
+	.overview .boxes .box li,
+	.listview .boxes .box li 
 	.dozen .results li  {
     	margin: 50px 0;
 	}
 
-	.overview .boxes .box li h2, 
+	.overview .boxes .box li h2,
+	.listview .boxes .box li h2, 
 	.dozen .results li h2 {
 		font-size: 3em;
 	}
 
-	.overview .boxes .box li h3, 
+	.overview .boxes .box li h3,
+	.listview .boxes .box li h3 
 	.dozen .results li h3 {
     	font-size: 1.6em;
     }
 
-    .overview .boxes .box li h3 img, .dozen .results li h3 img {
+    .overview .boxes .box li h3 img,
+    .dozen .results li h3 img {
     	max-width: 20px;
 
 	}
 
-	.overview header h1 {
+	.overview header h1,
+	.listview header h1 {
 	    margin-top: -70px;
 	    font-size: 0.6em;
 	}
 
 	.overview .boxes .box li h3, 
+	.listview .boxes .box li h3
 	.dozen .results li h3 {
 		padding: 7px 5px;
 	}
@@ -186,6 +213,7 @@
 	}
 	.intro header h1 div, 
 	.overview header h1 div, 
+	.listview header h1 div, 
 	.dozen header h1 div {
 		min-width: 15px;
 		min-height: 15px;
@@ -193,6 +221,7 @@
 
 	.intro .header aside, 
 	.overview .header aside, 
+	.listview .header aside
 	.dozen .header aside {
 		width: 75px;
 		margin-top: 0;
@@ -207,6 +236,22 @@
 	form h2 {
 		font-size: 3em;
 	}
+
+	.tags .optionHeader h1, 
+	.feedback .optionHeader h1, 
+	.overview .optionHeader h1,
+	.listview .optionHeader h1 {
+		font-size: 3em;
+	}
+}
+
+@media only screen and (min-width:480px) and (max-width:580px){
+	.intro header h1, 
+	.overview header h1, 
+	.listview header h1, 
+	.dozen header h1 {
+		font-size: 0.7em;
+	}
 }
 
 @media (min-width:480px) and (max-width: 840px) { 
@@ -219,6 +264,11 @@
 	.overview .boxes, 
 	.dozen .results,
 	.dozen .tagresults,
+	.tags .optionHeader, 
+	.feedback .optionHeader, 
+	.overview .optionHeader,
+	.listview .boxes,
+	.listview .optionHeader
 	form {
 		max-width: 70%;
 	}

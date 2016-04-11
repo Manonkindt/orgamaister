@@ -18,6 +18,13 @@ var ProjectCollection = Backbone.Collection.extend({
 		});
 	},
 
+	filterByClient: function(query){
+		pattern = new RegExp("(?=.*" + query.replace(/ +/g, ")(?=.*") + ").*", "g");
+		return this.filter(function(tag){
+			return pattern.test(tag.get('name').toLowerCase());
+		});
+	},
+
 	methodUrl: function(method){
 
 		if(method === "read" && this.box_id){
