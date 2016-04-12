@@ -54,7 +54,27 @@ var IntroView = Backbone.View.extend({
 		} else {
 			// this.$el.find('.box').show();
 			this.$el.find('.lamp').css("width", "40%");
-			this.$el.find('.lamp').css("margin-top", "-365px");
+
+			var mq = window.matchMedia( "(min-width: 1450px)" );
+
+			if(mq.matches) {
+				console.log('at least 840px');
+		    	this.$el.find('.lamp').css("margin-top", "-365px");
+			} else {
+				console.log('smaller than 840px');
+				this.$el.find('.lamp').css("margin-top", "-150px");
+			}
+
+
+			var mqr = window.matchMedia( "(max-width: 700px)" );
+
+			if(mqr.matches) {
+				console.log('at least 840px');
+		    	this.$el.find('.lamp').css("margin-top", "-100px");
+			}
+
+
+			
 			this.$el.find('.addbox').show();
 			this.$el.find('.tag').hide();
 			this.array = [];

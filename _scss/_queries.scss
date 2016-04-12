@@ -207,6 +207,22 @@
 	}
 }
 
+@media only screen and (max-width:830px){
+	form {
+		max-width: 70%;
+	}
+	
+}
+
+@media only screen and (min-width:480px) and (max-width: 1200px){
+	.intro .header aside, .overview .header aside, .listview .header aside, .dozen .header aside {
+		width: 60px;
+		height: 60px;
+		margin-top: -20px;
+	}
+}
+
+
 @media (min-width:480px) and (max-width: 650px) {
 	.dozen .header header h1 {
 	    font-size: 0.8em;
@@ -223,8 +239,8 @@
 	.overview .header aside, 
 	.listview .header aside
 	.dozen .header aside {
-		width: 75px;
-		margin-top: 0;
+		width: 50px;
+		margin-top: -30px;
 	}
 
 	.intro .header header, 
@@ -251,6 +267,12 @@
 	.listview header h1, 
 	.dozen header h1 {
 		font-size: 0.7em;
+	}
+}
+
+@media only screen and (min-width:480px) and (max-width:650px){
+	.intro header h1 {
+		margin-top: -140px;
 	}
 }
 
