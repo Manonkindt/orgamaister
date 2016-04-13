@@ -53,7 +53,9 @@
 		}
 	}
 
-	.tags .optionHeader, .feedback .optionHeader, .overview .optionHeader {
+	.tags .optionHeader, 
+	.feedback .optionHeader, 
+	.overview .optionHeader {
 		max-width: 70%;
 		margin-top: 80px;
 
@@ -83,6 +85,7 @@
 
 	.white.form input {
 		padding: 0;
+		margin-top: 30px;
 	}
 
 	input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -156,8 +159,13 @@
 
 	.overview header h1,
 	.listview header h1 {
-	    margin-top: -70px;
+	    margin-top: -15px;
 	    font-size: 0.6em;
+
+	    div {
+	    	min-width: 10px;
+	    	min-height: 10px;
+	    }
 	}
 
 	.overview .boxes .box li h3, 
@@ -220,6 +228,22 @@
 		height: 60px;
 		margin-top: -20px;
 	}
+	
+	.intro .header header, .overview .header header, .listview .header header, .dozen .header header {
+		font-size: 2.5em;
+		margin-top: -27px;
+	}
+
+	.intro header h1 div, .overview header h1 div, .listview header h1 div, .dozen .header header {
+		min-width: 15px;
+		min-height: 15px;
+	}
+
+	.header.white header h1 {
+		margin-top: -130px;
+	}
+
+
 }
 
 
@@ -231,13 +255,13 @@
 	.overview header h1 div, 
 	.listview header h1 div, 
 	.dozen header h1 div {
-		min-width: 15px;
-		min-height: 15px;
+		min-width: 10px;
+		min-height: 10px;
 	}
 
 	.intro .header aside, 
 	.overview .header aside, 
-	.listview .header aside
+	.listview .header aside,
 	.dozen .header aside {
 		width: 50px;
 		margin-top: -30px;
@@ -290,7 +314,7 @@
 	.feedback .optionHeader, 
 	.overview .optionHeader,
 	.listview .boxes,
-	.listview .optionHeader
+	.listview .optionHeader,
 	form {
 		max-width: 70%;
 	}

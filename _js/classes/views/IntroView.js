@@ -38,7 +38,7 @@ var IntroView = Backbone.View.extend({
 			// this.$el.find('.white').hide();
 			// this.$el.find('.white').removeClass("white");
 			this.$el.find('.lamp').css("width", "20%");
-			this.$el.find('.lamp').css("margin-top", "-167px");
+			this.$el.find('.lamp').css("margin-top", "-20px");
 
 			var inputs = input.split(" ");
 			this.renderFilteredTags(this.projectcollection.filterTags(input));
@@ -55,13 +55,11 @@ var IntroView = Backbone.View.extend({
 			// this.$el.find('.box').show();
 			this.$el.find('.lamp').css("width", "40%");
 
-			var mq = window.matchMedia( "(min-width: 1450px)" );
+			var mq = window.matchMedia( "(min-width: 1400px)" );
 
 			if(mq.matches) {
-				console.log('at least 840px');
 		    	this.$el.find('.lamp').css("margin-top", "-365px");
 			} else {
-				console.log('smaller than 840px');
 				this.$el.find('.lamp').css("margin-top", "-150px");
 			}
 
@@ -69,7 +67,6 @@ var IntroView = Backbone.View.extend({
 			var mqr = window.matchMedia( "(max-width: 700px)" );
 
 			if(mqr.matches) {
-				console.log('at least 840px');
 		    	this.$el.find('.lamp').css("margin-top", "-100px");
 			}
 

@@ -17,7 +17,6 @@ var ProjectDetailView = Backbone.View.extend({
 		'keydown .text': 'addTags',
 		'click .home': 'goHome',
 		'click .gotomybox': 'gotomybox'
-
 	},
 
 	array: [],
@@ -38,13 +37,13 @@ var ProjectDetailView = Backbone.View.extend({
 
 		var input = $(e.currentTarget).val().toLowerCase();
 
-    	if (e.keyCode == 32 && this.$el.find('.text').val() !== "") {
+    	if (e.keyCode == 13 && this.$el.find('.text').val() !== "") {
 
     		if(input !== " " || input !== "" || input !== undefined){
     			this.array.push(input);
     		}
 
-    		// console.log('array ' + this.array);
+    		console.log('array ' + this.array);
 
 			var res = input.split(" ");
 			res = res.filter(Boolean);
@@ -54,10 +53,9 @@ var ProjectDetailView = Backbone.View.extend({
 				if(res[i] !== " "){
 
 					var div = document.createElement("li");
-					div.className = 'item inputwrapper';
+					div.className = 'item inputwrapper hidden';
 					div.setAttribute('id', i);
 
-	
         			var addtags = $('.addtags ul.inputwrap .taglist');
 		
         			var span = document.createElement("span");
@@ -114,7 +112,6 @@ var ProjectDetailView = Backbone.View.extend({
 		var newitem = this.tag;
 		var modeeel = this.model;
 
-
 		if(this.$el.find('.text').val() === "" && document.getElementsByClassName('item inputwrapper').length === 0 || this.$el.find('.text').val() === " " && document.getElementsByClassName('item inputwrapper').length === 0){
 			return;
 		}
@@ -126,39 +123,11 @@ var ProjectDetailView = Backbone.View.extend({
 
       	var energy = test.join(' ');
 
-      	if(document.getElementsByClassName('item inputwrapper').length !== 0){
-      		for (var i = 0; i < test.length; i++) {
-
-      			test[i] = test[i].replace(/\s+/g, " ");
-
+      		console.log(energy);
+	      			
       			newitem.create({
  					box_name: modeeel.get('box_name'),
-      				tag: test[i],
-      				project_name: modeeel.get('name'),
-      				project_id: modeeel.get('id'),
-      				box_id: modeeel.get('box_id')
-            	}, {
-            	    success: function(response){            		    
-            	       	$( ".item.inputwrapper" ).remove();
-            	    }
-            	});
-
-            	if ( modeeel.set('tags_list', modeeel.get('tags_list') + ', ' + test[i]) ) {
-					modeeel.save();
-            	    location.reload();
-            	}
-      		}
-      	} else {
-
-      		var newArray = energy.split(" ");
-	
-      		for (var i = 0; i < newArray.length; i++) {
-
-      			newArray[i] = newArray[i].replace(/\s+/g, " ");
-      			
-      			newitem.create({
- 					box_name: modeeel.get('box_name'),
-      				tag: newArray[i],
+      				tag: energy,
       				project_name: modeeel.get('name'),
       				project_id: modeeel.get('id'),
       				box_id: modeeel.get('box_id')
@@ -169,13 +138,11 @@ var ProjectDetailView = Backbone.View.extend({
             	    }
             	});
 
-            	if ( modeeel.set('tags_list', modeeel.get('tags_list') + ', ' + newArray[i]) ){
+            	if ( modeeel.set('tags_list', modeeel.get('tags_list') + ', ' + energy) ){
 					modeeel.save();
             		location.reload();
             	}
-      		}
 
-      	}
 	},
 
 	changeScore: function(e){

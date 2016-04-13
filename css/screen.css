@@ -126,7 +126,7 @@ html {
     text-align: center; }
 
 .tags .optionHeader, .feedback .optionHeader, .overview .optionHeader, .listview .optionHeader {
-  margin-top: 230px;
+  margin-top: 150px;
   margin-bottom: -22px;
   max-width: 700px;
   display: block;
@@ -412,7 +412,7 @@ form {
   margin-bottom: 95px;
   margin-top: -21px;
   position: relative;
-  z-index: 15000; }
+  z-index: 13000; }
   form h2 {
     border-bottom: 3px solid black;
     font-size: 4.7em;
@@ -455,7 +455,7 @@ li {
 
 #popup {
   position: absolute;
-  z-index: 999;
+  z-index: 15000;
   min-width: 100%;
   height: 100%;
   max-height: 100%;
@@ -499,7 +499,7 @@ li {
   margin-left: auto;
   max-width: 40px;
   width: 190px;
-  left: 50%;
+  left: 94%;
   margin-left: -20px;
   position: fixed;
   bottom: 10px; }
@@ -690,10 +690,14 @@ a {
       height: 40px;
       margin: 30px 0; }
 
-  .tags .optionHeader, .feedback .optionHeader, .overview .optionHeader {
+  .tags .optionHeader,
+  .feedback .optionHeader,
+  .overview .optionHeader {
     max-width: 70%;
     margin-top: 80px; }
-    .tags .optionHeader h1, .feedback .optionHeader h1, .overview .optionHeader h1 {
+    .tags .optionHeader h1,
+    .feedback .optionHeader h1,
+    .overview .optionHeader h1 {
       font-size: 1.9em; }
 
   .listview .optionHeader {
@@ -711,7 +715,8 @@ a {
     height: 40px; }
 
   .white.form input {
-    padding: 0; }
+    padding: 0;
+    margin-top: 30px; }
 
   input::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -769,8 +774,12 @@ a {
 
   .overview header h1,
   .listview header h1 {
-    margin-top: -70px;
+    margin-top: -15px;
     font-size: 0.6em; }
+    .overview header h1 div,
+    .listview header h1 div {
+      min-width: 10px;
+      min-height: 10px; }
 
   .overview .boxes .box li h3,
   .listview .boxes .box li h3
@@ -814,7 +823,18 @@ a {
   .intro .header aside, .overview .header aside, .listview .header aside, .dozen .header aside {
     width: 60px;
     height: 60px;
-    margin-top: -20px; } }
+    margin-top: -20px; }
+
+  .intro .header header, .overview .header header, .listview .header header, .dozen .header header {
+    font-size: 2.5em;
+    margin-top: -27px; }
+
+  .intro header h1 div, .overview header h1 div, .listview header h1 div, .dozen .header header {
+    min-width: 15px;
+    min-height: 15px; }
+
+  .header.white header h1 {
+    margin-top: -130px; } }
 @media (min-width: 480px) and (max-width: 650px) {
   .dozen .header header h1 {
     font-size: 0.8em; }
@@ -823,12 +843,12 @@ a {
   .overview header h1 div,
   .listview header h1 div,
   .dozen header h1 div {
-    min-width: 15px;
-    min-height: 15px; }
+    min-width: 10px;
+    min-height: 10px; }
 
   .intro .header aside,
   .overview .header aside,
-  .listview .header aside
+  .listview .header aside,
   .dozen .header aside {
     width: 50px;
     margin-top: -30px; }
@@ -868,7 +888,7 @@ a {
   .feedback .optionHeader,
   .overview .optionHeader,
   .listview .boxes,
-  .listview .optionHeader
+  .listview .optionHeader,
   form {
     max-width: 70%; }
 

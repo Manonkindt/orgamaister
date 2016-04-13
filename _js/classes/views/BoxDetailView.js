@@ -13,7 +13,8 @@ var BoxDetailView = Backbone.View.extend({
 	events: {
 		'click .delete': 'clickDelete',
 		'click .addproject': 'clickAddproject',
-		'click .home': 'goHome'
+		'click .home': 'goHome',
+		'click .over': 'goOverview'
 	},
 
 	array: [],
@@ -22,7 +23,11 @@ var BoxDetailView = Backbone.View.extend({
 
 	goHome: function(e) {
 		Window.Application.navigate("intro", {trigger: true});
-		location.reload();
+	},
+
+	goOverview: function(e) {
+		e.preventDefault();
+		Window.Application.navigate("overview", {trigger: true});
 	},
 
 	clickAddproject: function(e){

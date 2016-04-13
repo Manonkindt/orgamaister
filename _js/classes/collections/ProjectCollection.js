@@ -18,9 +18,17 @@ var ProjectCollection = Backbone.Collection.extend({
 		});
 	},
 
+	// filterByClient: function(query){
+	// 	pattern = new RegExp("(?=.*" + query.replace(/ +/g, ")(?=.*") + ").*", "g");
+	// 	return this.filter(function(tag){
+	// 		return pattern.test(tag.get('name').toLowerCase());
+	// 	});
+	// },
+
 	filterByClient: function(query){
-		pattern = new RegExp("(?=.*" + query.replace(/ +/g, ")(?=.*") + ").*", "g");
+		pattern = new RegExp("(^" + query + "| " + query + ")", "g");		
 		return this.filter(function(tag){
+			var res = tag.get('name').toLowerCase().split(" ");
 			return pattern.test(tag.get('name').toLowerCase());
 		});
 	},

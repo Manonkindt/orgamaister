@@ -35,16 +35,11 @@ var Application = Backbone.Router.extend({
 		this.overview = new OverviewView();
 		$('.container').append(this.overview.render().el);
 		$('.container').scroll(function() {
-            console.log('checkScroll');
 
         	var currentScrollPos = $('.container').scrollTop();
 
-        	console.log(this.topPos, currentScrollPos);
-
 			if(this.topPos > currentScrollPos) {
-				console.log('scroll up');
 			} else {
-				console.log('scroll down');
 				$('.scroll_down').addClass('hidden');
 			}
 	
@@ -70,16 +65,11 @@ var Application = Backbone.Router.extend({
 		});
 		$('.container').append(this.box.render().el);
 		$('.container').scroll(function() {
-            console.log('checkScroll');
 
         	var currentScrollPos = $('.container').scrollTop();
 
-        	console.log(this.topPos, currentScrollPos);
-
 			if(this.topPos > currentScrollPos) {
-				console.log('scroll up');
 			} else {
-				console.log('scroll down');
 				$('.scroll_down').addClass('hidden');
 			}
 	
@@ -99,16 +89,12 @@ var Application = Backbone.Router.extend({
 		});
 		$('.container').append(this.project.render().el);
 		$('.container').scroll(function() {
-            console.log('checkScroll');
 
         	var currentScrollPos = $('.container').scrollTop();
 
-        	console.log(this.topPos, currentScrollPos);
 
 			if(this.topPos > currentScrollPos) {
-				console.log('scroll up');
 			} else {
-				console.log('scroll down');
 				$('.scroll_down').addClass('hidden');
 			}
 	

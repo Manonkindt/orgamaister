@@ -14,8 +14,7 @@ var OverviewView = Backbone.View.extend({
 
 	events: {
 		'click .add': 'clickAdd',
-		'click .home': 'goHome'
-
+		'click .home': 'goHome',
 	},
 
 	array: [],
@@ -24,7 +23,6 @@ var OverviewView = Backbone.View.extend({
 		Window.Application.navigate("intro", {trigger: true});
 		location.reload();
 	},
-
 
 	clickAdd: function(e){
 
