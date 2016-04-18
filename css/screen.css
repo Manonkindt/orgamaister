@@ -845,6 +845,11 @@ a {
   max-width: 40px;
 }
 
+/* line 110, ../_scss/_intro.scss */
+.overview .boxes .box li h2 {
+  text-transform: uppercase;
+}
+
 /* line 1, ../_scss/_tags.scss */
 .dozen .tagresults {
   display: block;
