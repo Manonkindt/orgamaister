@@ -40,8 +40,6 @@ var ProjectDetailView = Backbone.View.extend({
 		var string = this.model.get('tags_list'),
     	substring = input;
 
-    	console.log(string, substring);
-
     	//check if tag exists
 		if(string.indexOf(substring) > -1){
 			this.$el.find('.exist').show();
@@ -58,8 +56,6 @@ var ProjectDetailView = Backbone.View.extend({
     		if(input !== " " || input !== "" || input !== undefined){
     			this.array.push(input);
     		}
-
-    		console.log('array ' + this.array);
 
 			var res = input.split(" ");
 			res = res.filter(Boolean);
@@ -170,11 +166,50 @@ var ProjectDetailView = Backbone.View.extend({
 	removeFromTagsList: function(e){
 		e.preventDefault();
 
-		var removable = e.currentTarget.parentNode.getElementsByTagName('p')[0].innerHTML;
 
-		var newTagsList = this.model.get('tags_list').replace(', ' + removable,'');
-		this.model.set('tags_list', newTagsList);
-		this.model.save();
+		document.getElementById("popup").className = "";
+
+		var popup = document.getElementById("popup");
+
+		var deletemodel = this.model;
+
+		var name = $(e.target)[0].parentNode.parentNode.getElementsByTagName('h2')[0].innerHTML
+
+
+		document.querySelectorAll('#popup span')[0].innerHTML = name;
+
+		popup.getElementsByClassName('go')[0].addEventListener("click", function(a){
+			a.preventDefault();
+
+			$.ajax({
+				type:"DELETE",
+				url:window.settings.httpRoot + "api/tags/" + $(e.target)[0].parentNode.id,
+				success:function(response){
+					if(response){
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+						
+					}
+				}
+			});
+
+			var removable = $(e.target)[0].parentNode.parentNode.getElementsByTagName('p')[0].innerHTML;
+
+			var newTagsList = deletemodel.get('tags_list').replace(', ' + removable,'');
+			deletemodel.set('tags_list', newTagsList);
+			deletemodel.save();
+
+			console.log(removable);
+
+			document.getElementById("popup").className = "hidden";
+			location.reload();
+
+		});
+	
+		popup.getElementsByClassName('no')[0].addEventListener("click", function(o){
+			o.preventDefault();
+			document.getElementById("popup").className = "hidden";
+		});
 	},
 
 	clickDelete: function(e){

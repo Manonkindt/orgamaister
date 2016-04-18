@@ -931,13 +931,24 @@ a {
     margin-top: -49px;
     width: 40px;
   }
+  /* line 17, ../_scss/_queries.scss */
+  .intro .header aside a p,
+  .overview .header aside a p,
+  .listview .header aside a p,
+  .dozen .header aside a p {
+    font-size: 0.6em;
+    height: 100px;
+    line-height: 100px;
+    width: 60px;
+    margin-top: 20px;
+  }
 
-  /* line 18, ../_scss/_queries.scss */
+  /* line 26, ../_scss/_queries.scss */
   .intro .header > header {
     width: 65%;
   }
 
-  /* line 22, ../_scss/_queries.scss */
+  /* line 30, ../_scss/_queries.scss */
   .intro header h1 div,
   .overview header h1 div,
   .listview header h1 div,
@@ -948,88 +959,88 @@ a {
     min-height: 7px;
   }
 
-  /* line 32, ../_scss/_queries.scss */
+  /* line 40, ../_scss/_queries.scss */
   h1 {
     max-width: 100%;
     font-size: 0.7em;
   }
 
-  /* line 37, ../_scss/_queries.scss */
+  /* line 45, ../_scss/_queries.scss */
   form {
     max-width: 70%;
     margin-top: -100px;
     margin-bottom: 0;
   }
-  /* line 42, ../_scss/_queries.scss */
+  /* line 50, ../_scss/_queries.scss */
   form h2 {
     font-size: 1.9em;
   }
-  /* line 46, ../_scss/_queries.scss */
+  /* line 54, ../_scss/_queries.scss */
   form span {
     font-size: 1.2em;
   }
-  /* line 50, ../_scss/_queries.scss */
+  /* line 58, ../_scss/_queries.scss */
   form .name {
     height: 40px;
     margin: 30px 0;
   }
 
-  /* line 56, ../_scss/_queries.scss */
+  /* line 64, ../_scss/_queries.scss */
   .tags .optionHeader,
   .feedback .optionHeader,
   .overview .optionHeader {
     max-width: 70%;
     margin-top: 80px;
   }
-  /* line 62, ../_scss/_queries.scss */
+  /* line 70, ../_scss/_queries.scss */
   .tags .optionHeader h1,
   .feedback .optionHeader h1,
   .overview .optionHeader h1 {
     font-size: 1.9em;
   }
 
-  /* line 68, ../_scss/_queries.scss */
+  /* line 76, ../_scss/_queries.scss */
   .listview .optionHeader {
     margin-top: -40px;
     max-width: 70%;
   }
-  /* line 71, ../_scss/_queries.scss */
+  /* line 79, ../_scss/_queries.scss */
   .listview .optionHeader h1 {
     font-size: 1.9em;
   }
 
-  /* line 76, ../_scss/_queries.scss */
+  /* line 84, ../_scss/_queries.scss */
   .add {
     font-size: 2em;
     border: 3px solid black;
     padding: 0px 33px;
   }
 
-  /* line 82, ../_scss/_queries.scss */
+  /* line 90, ../_scss/_queries.scss */
   .filter {
     height: 40px;
   }
 
-  /* line 86, ../_scss/_queries.scss */
+  /* line 94, ../_scss/_queries.scss */
   .white.form input {
     padding: 0;
     margin-top: 30px;
   }
 
-  /* line 91, ../_scss/_queries.scss */
+  /* line 99, ../_scss/_queries.scss */
   input::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: #fff;
     font-size: 50px;
   }
 
-  /* line 98, ../_scss/_queries.scss */
+  /* line 106, ../_scss/_queries.scss */
   .lamp {
     margin-top: -50px;
     margin-bottom: 20px;
   }
 
-  /* line 103, ../_scss/_queries.scss */
+  /* line 111, ../_scss/_queries.scss */
   .intro .boxes,
   .overview .boxes,
   .listview .boxes,
@@ -1038,32 +1049,32 @@ a {
     max-width: 70%;
   }
 
-  /* line 113, ../_scss/_queries.scss */
+  /* line 121, ../_scss/_queries.scss */
   .intro .boxes .tag li h2,
   .dozen .feedback .results .detail li h2 {
     font-size: 4em;
   }
 
-  /* line 118, ../_scss/_queries.scss */
+  /* line 126, ../_scss/_queries.scss */
   .intro .boxes .tag li h3,
   .dozen .feedback .results .detail li h3 {
     font-size: 1.3em;
     margin-top: 15px;
   }
 
-  /* line 124, ../_scss/_queries.scss */
+  /* line 132, ../_scss/_queries.scss */
   .intro .boxes .tag li p,
   .dozen .feedback .results .detail li p {
     font-size: 1.5em;
     margin-top: 7px;
   }
 
-  /* line 130, ../_scss/_queries.scss */
+  /* line 138, ../_scss/_queries.scss */
   input[placeholder] {
     font-size: 27px;
   }
 
-  /* line 134, ../_scss/_queries.scss */
+  /* line 142, ../_scss/_queries.scss */
   .intro .boxes .tag li,
   .dozen .feedback .results .detail li,
   .overview .boxes .box li,
@@ -1072,133 +1083,139 @@ a {
     margin: 50px 0;
   }
 
-  /* line 142, ../_scss/_queries.scss */
+  /* line 150, ../_scss/_queries.scss */
   .overview .boxes .box li h2,
   .listview .boxes .box li h2,
   .dozen .results li h2 {
     font-size: 3em;
   }
 
-  /* line 148, ../_scss/_queries.scss */
+  /* line 156, ../_scss/_queries.scss */
   .overview .boxes .box li h3,
   .listview .boxes .box li h3
   .dozen .results li h3 {
     font-size: 1.6em;
   }
 
-  /* line 154, ../_scss/_queries.scss */
+  /* line 162, ../_scss/_queries.scss */
   .overview .boxes .box li h3 img,
   .dozen .results li h3 img {
     max-width: 20px;
   }
 
-  /* line 160, ../_scss/_queries.scss */
+  /* line 168, ../_scss/_queries.scss */
   .overview header h1,
   .listview header h1 {
     margin-top: -15px;
     font-size: 0.6em;
   }
-  /* line 165, ../_scss/_queries.scss */
+  /* line 173, ../_scss/_queries.scss */
   .overview header h1 div,
   .listview header h1 div {
     min-width: 10px;
     min-height: 10px;
   }
 
-  /* line 171, ../_scss/_queries.scss */
+  /* line 179, ../_scss/_queries.scss */
   .overview .boxes .box li h3,
   .listview .boxes .box li h3
   .dozen .results li h3 {
     padding: 7px 5px;
   }
 
-  /* line 177, ../_scss/_queries.scss */
+  /* line 185, ../_scss/_queries.scss */
   .dozen .tagresults li a {
     min-width: 30px;
     float: right;
     margin-top: 8px;
   }
 
-  /* line 183, ../_scss/_queries.scss */
+  /* line 191, ../_scss/_queries.scss */
   .dozen .tagresults li p {
     font-size: 2.3em;
   }
 
-  /* line 187, ../_scss/_queries.scss */
+  /* line 195, ../_scss/_queries.scss */
   .dozen .tagresults li {
     padding: 14px 10px;
   }
 
-  /* line 191, ../_scss/_queries.scss */
+  /* line 199, ../_scss/_queries.scss */
   .dozen .header header {
     margin-top: -55px;
   }
-  /* line 193, ../_scss/_queries.scss */
+  /* line 201, ../_scss/_queries.scss */
   .dozen .header header h1 {
     font-size: 0.6em;
   }
 
-  /* line 198, ../_scss/_queries.scss */
+  /* line 206, ../_scss/_queries.scss */
   .dozen .tagresults {
     margin-top: 50px;
   }
 
-  /* line 202, ../_scss/_queries.scss */
+  /* line 210, ../_scss/_queries.scss */
   .taglist {
     height: 40px;
     margin-top: 5px;
   }
 
-  /* line 207, ../_scss/_queries.scss */
+  /* line 215, ../_scss/_queries.scss */
   .dozen form,
   .overview form {
     margin-top: -45px;
   }
 
-  /* line 212, ../_scss/_queries.scss */
+  /* line 220, ../_scss/_queries.scss */
   .inputwrapper span.remove {
     margin-top: 22px;
     padding: 0px 18px 6px 5px;
   }
 }
 @media only screen and (max-width: 830px) {
-  /* line 219, ../_scss/_queries.scss */
+  /* line 227, ../_scss/_queries.scss */
   form {
     max-width: 70%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 1200px) {
-  /* line 226, ../_scss/_queries.scss */
+  /* line 234, ../_scss/_queries.scss */
   .intro .header aside, .overview .header aside, .listview .header aside, .dozen .header aside {
     width: 60px;
     height: 60px;
     margin-top: -20px;
   }
+  /* line 239, ../_scss/_queries.scss */
+  .intro .header aside a p, .overview .header aside a p, .listview .header aside a p, .dozen .header aside a p {
+    width: 60px;
+    height: 140px;
+    line-height: 140px;
+  }
 
-  /* line 232, ../_scss/_queries.scss */
+  /* line 246, ../_scss/_queries.scss */
   .intro .header header, .overview .header header, .listview .header header, .dozen .header header {
     font-size: 2.5em;
     margin-top: -27px;
   }
 
-  /* line 237, ../_scss/_queries.scss */
+  /* line 251, ../_scss/_queries.scss */
   .intro header h1 div, .overview header h1 div, .listview header h1 div, .dozen .header header {
     min-width: 15px;
     min-height: 15px;
   }
 
-  /* line 242, ../_scss/_queries.scss */
+  /* line 256, ../_scss/_queries.scss */
   .header.white header h1 {
     margin-top: -130px;
   }
 }
 @media (min-width: 480px) and (max-width: 650px) {
-  /* line 251, ../_scss/_queries.scss */
+  /* line 265, ../_scss/_queries.scss */
   .dozen .header header h1 {
     font-size: 0.8em;
   }
 
-  /* line 254, ../_scss/_queries.scss */
+  /* line 268, ../_scss/_queries.scss */
   .intro header h1 div,
   .overview header h1 div,
   .listview header h1 div,
@@ -1207,28 +1224,36 @@ a {
     min-height: 10px;
   }
 
-  /* line 262, ../_scss/_queries.scss */
+  /* line 276, ../_scss/_queries.scss */
   .intro .header aside,
   .overview .header aside,
   .listview .header aside,
   .dozen .header aside {
     width: 50px;
-    margin-top: -30px;
+    margin-top: -15px;
+  }
+  /* line 283, ../_scss/_queries.scss */
+  .intro .header aside a p,
+  .overview .header aside a p,
+  .listview .header aside a p,
+  .dozen .header aside a p {
+    font-size: 0.8em;
+    margin-top: -3px;
   }
 
-  /* line 270, ../_scss/_queries.scss */
+  /* line 289, ../_scss/_queries.scss */
   .intro .header header,
   .overview .header header,
   .dozen .header header {
     margin-top: -24px;
   }
 
-  /* line 276, ../_scss/_queries.scss */
+  /* line 295, ../_scss/_queries.scss */
   form h2 {
     font-size: 3em;
   }
 
-  /* line 280, ../_scss/_queries.scss */
+  /* line 299, ../_scss/_queries.scss */
   .tags .optionHeader h1,
   .feedback .optionHeader h1,
   .overview .optionHeader h1,
@@ -1237,7 +1262,7 @@ a {
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 580px) {
-  /* line 289, ../_scss/_queries.scss */
+  /* line 308, ../_scss/_queries.scss */
   .intro header h1,
   .overview header h1,
   .listview header h1,
@@ -1246,19 +1271,19 @@ a {
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 650px) {
-  /* line 298, ../_scss/_queries.scss */
+  /* line 317, ../_scss/_queries.scss */
   .intro header h1 {
     margin-top: -140px;
   }
 }
 @media (min-width: 480px) and (max-width: 840px) {
-  /* line 304, ../_scss/_queries.scss */
+  /* line 323, ../_scss/_queries.scss */
   .header.white .lamp {
     margin-top: -100px;
     width: 40%;
   }
 
-  /* line 309, ../_scss/_queries.scss */
+  /* line 328, ../_scss/_queries.scss */
   .intro .boxes,
   .overview .boxes,
   .dozen .results,
@@ -1272,43 +1297,43 @@ a {
     max-width: 70%;
   }
 
-  /* line 322, ../_scss/_queries.scss */
+  /* line 341, ../_scss/_queries.scss */
   .intro header h1 {
     font-size: 0.7em;
   }
 
-  /* line 326, ../_scss/_queries.scss */
+  /* line 345, ../_scss/_queries.scss */
   .header.white div {
     min-width: 10px;
     min-height: 10px;
     margin: 0 7px;
   }
 
-  /* line 332, ../_scss/_queries.scss */
+  /* line 351, ../_scss/_queries.scss */
   .lamp {
     margin-top: -25px;
   }
 }
 @media (min-width: 840px) {
-  /* line 339, ../_scss/_queries.scss */
+  /* line 358, ../_scss/_queries.scss */
   .header.white .lamp {
     margin-top: -200px;
     width: 40%;
   }
 
-  /* line 344, ../_scss/_queries.scss */
+  /* line 363, ../_scss/_queries.scss */
   .lamp {
     margin-top: -25px;
   }
 }
 @media (min-width: 1300px) {
-  /* line 350, ../_scss/_queries.scss */
+  /* line 369, ../_scss/_queries.scss */
   .header.white .lamp {
     margin-top: -365px;
     width: 40%;
   }
 
-  /* line 355, ../_scss/_queries.scss */
+  /* line 374, ../_scss/_queries.scss */
   .lamp {
     margin-top: -150px;
   }

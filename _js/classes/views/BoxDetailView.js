@@ -79,11 +79,9 @@ var BoxDetailView = Backbone.View.extend({
 		});
 		this.$el.find('.textproject').val("");
 	},
-
+	
 	clickDelete: function(e){
 		e.preventDefault();
-
-		console.log('delete this box and every project in it');
 
 		document.getElementById("popup").className = "";
 
@@ -91,7 +89,6 @@ var BoxDetailView = Backbone.View.extend({
 
 		var deletemodel = this.model;
 
-		console.log($(e.target)[0].parentNode.id);
 		var name = $(e.target)[0].parentNode.parentNode.getElementsByTagName('h2')[0].innerHTML
 
 		document.querySelectorAll('#popup span')[0].innerHTML = name;
@@ -101,31 +98,19 @@ var BoxDetailView = Backbone.View.extend({
 
 			$.ajax({
 				type:"DELETE",
-				url:window.settings.httpRoot + "api/boxes/" + $(e.target)[0].parentNode.id,
+				url:window.settings.httpRoot + "api/projects/" + $(e.target)[0].parentNode.id,
 				success:function(response){
 					if(response){
 						// window.Application.navigate("home", {trigger: true});
 					} else {
-	
+						
 					}
 				}
 			});
 	
 			$.ajax({
 				type:"DELETE",
-				url:window.settings.httpRoot + "api/projects/box/" + $(e.target)[0].parentNode.id,
-				success:function(response){
-					if(response){
-						// window.Application.navigate("home", {trigger: true});
-					} else {
-	
-					}
-				}
-			});
-
-			$.ajax({
-				type:"DELETE",
-				url:window.settings.httpRoot + "api/tags/box/" + $(e.target)[0].parentNode.id,
+				url:window.settings.httpRoot + "api/tags/project/" + $(e.target)[0].parentNode.id,
 				success:function(response){
 					if(response){
 						// window.Application.navigate("home", {trigger: true});
@@ -146,6 +131,7 @@ var BoxDetailView = Backbone.View.extend({
 		});
 
 	},
+
 
 	initialize: function(options){
 

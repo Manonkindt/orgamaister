@@ -5,7 +5,7 @@ var FeedbackItemView = Backbone.View.extend({
 	tagName: 'li',
 
 	events: {
-		'click .gone': 'clickDelete',
+		// 'click .gone': 'clickDelete',
 	},
 
 	clickDelete: function(e){

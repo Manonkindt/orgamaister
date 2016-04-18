@@ -13,6 +13,14 @@
 	.dozen .header aside {
 		margin-top: -49px;
 		width: 40px;
+
+		a p {
+			font-size: 0.6em;
+			height: 100px;
+			line-height: 100px;
+			width: 60px;
+			margin-top: 20px;
+		}
 	}
 
 	.intro .header > header {
@@ -227,6 +235,12 @@
 		width: 60px;
 		height: 60px;
 		margin-top: -20px;
+
+		a p {
+			width: 60px;
+			height: 140px;
+			line-height: 140px;
+		}
 	}
 	
 	.intro .header header, .overview .header header, .listview .header header, .dozen .header header {
@@ -264,7 +278,12 @@
 	.listview .header aside,
 	.dozen .header aside {
 		width: 50px;
-		margin-top: -30px;
+		margin-top: -15px;
+
+		a p {
+			font-size: 0.8em;
+			margin-top: -3px;
+		}
 	}
 
 	.intro .header header, 

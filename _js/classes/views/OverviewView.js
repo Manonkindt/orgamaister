@@ -78,15 +78,11 @@ var OverviewView = Backbone.View.extend({
 clickDelete: function(e){
 		e.preventDefault();
 
-		console.log('delete this box and every project in it');
-
 		document.getElementById("popup").className = "";
 
 		var popup = document.getElementById("popup");
 
 		var deletemodel = this.model;
-
-		console.log($(e.target)[0].parentNode.id);
 		var name = $(e.target)[0].parentNode.parentNode.getElementsByTagName('h2')[0].innerHTML
 
 		document.querySelectorAll('#popup span')[0].innerHTML = name;
