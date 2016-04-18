@@ -12,6 +12,7 @@ var BoxDetailView = Backbone.View.extend({
 	
 	events: {
 		'click .gone': 'clickDelete',
+		'input .name': 'inputFilter',
 		'click .addproject': 'clickAddproject',
 		'click .home': 'goHome',
 		'click .over': 'goOverview'
@@ -28,6 +29,25 @@ var BoxDetailView = Backbone.View.extend({
 	goOverview: function(e) {
 		e.preventDefault();
 		Window.Application.navigate("overview", {trigger: true});
+	},
+
+	inputFilter: function(e){
+		e.preventDefault();
+
+		var input = $(e.currentTarget).val().toLowerCase();
+		if (input !== ""){
+
+			// console.log(this.project.filterByClient(input));
+			this.renderFilteredProjects(this.project.filterByClient(input));
+
+		} else {
+			
+			this.$el.find('.add').hide();
+			this.$el.find('.optionHeader').show();
+
+			this.array = [];
+			this.project.fetch();
+		}
 	},
 
 	clickAddproject: function(e){
@@ -63,7 +83,7 @@ var BoxDetailView = Backbone.View.extend({
 	clickDelete: function(e){
 		e.preventDefault();
 
-		console.log('delete this project and all his tags');
+		console.log('delete this box and every project in it');
 
 		document.getElementById("popup").className = "";
 
@@ -78,10 +98,10 @@ var BoxDetailView = Backbone.View.extend({
 
 		popup.getElementsByClassName('go')[0].addEventListener("click", function(a){
 			a.preventDefault();
-			
+
 			$.ajax({
 				type:"DELETE",
-				url:window.settings.httpRoot + "api/projects/" + $(e.target)[0].parentNode.id,
+				url:window.settings.httpRoot + "api/boxes/" + $(e.target)[0].parentNode.id,
 				success:function(response){
 					if(response){
 						// window.Application.navigate("home", {trigger: true});
@@ -93,7 +113,19 @@ var BoxDetailView = Backbone.View.extend({
 	
 			$.ajax({
 				type:"DELETE",
-				url:window.settings.httpRoot + "api/tags/project/" + $(e.target)[0].parentNode.id,
+				url:window.settings.httpRoot + "api/projects/box/" + $(e.target)[0].parentNode.id,
+				success:function(response){
+					if(response){
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+	
+					}
+				}
+			});
+
+			$.ajax({
+				type:"DELETE",
+				url:window.settings.httpRoot + "api/tags/box/" + $(e.target)[0].parentNode.id,
 				success:function(response){
 					if(response){
 						// window.Application.navigate("home", {trigger: true});
@@ -154,6 +186,21 @@ var BoxDetailView = Backbone.View.extend({
 		this.$tag.append(new TagItemView({model: tag}).render().el);
 	},
 
+	renderFilteredProjects: function(projex){
+			if(projex.length <= 0){
+				console.log('new => add?');
+				this.$el.find('.add').show();
+				this.$el.find('.optionHeader').hide();
+			} else if (projex.length > 0){
+				console.log('exists');
+				this.$el.find('.optionHeader').show();
+				this.$el.find('.add').hide();
+			}
+
+		this.$project.empty();
+		projex.forEach(this.renderProject, this);
+	},
+
 	renderAllProjects: function(){
 		this.$project.empty();
 		this.project.forEach(this.renderProject, this);
@@ -168,6 +215,9 @@ var BoxDetailView = Backbone.View.extend({
 
 		this.$tag = this.$el.find('.tagresults');
 		this.$project = this.$el.find('.results');
+
+		this.$el.find('.add').hide();
+		this.$el.find('.optionHeader').show();
 
 		this.tag.fetch();
 		this.project.fetch();

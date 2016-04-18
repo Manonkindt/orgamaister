@@ -16,6 +16,7 @@ var OverviewView = Backbone.View.extend({
 		'input .name': 'inputFilter',
 		'click .add' : 'clickAdd',
 		'click .home': 'goHome',
+		'click .gone': 'clickDelete'
 	},
 
 	array: [],
@@ -74,6 +75,73 @@ var OverviewView = Backbone.View.extend({
 
 	},
 
+clickDelete: function(e){
+		e.preventDefault();
+
+		console.log('delete this box and every project in it');
+
+		document.getElementById("popup").className = "";
+
+		var popup = document.getElementById("popup");
+
+		var deletemodel = this.model;
+
+		console.log($(e.target)[0].parentNode.id);
+		var name = $(e.target)[0].parentNode.parentNode.getElementsByTagName('h2')[0].innerHTML
+
+		document.querySelectorAll('#popup span')[0].innerHTML = name;
+
+		popup.getElementsByClassName('go')[0].addEventListener("click", function(a){
+			a.preventDefault();
+
+			$.ajax({
+				type:"DELETE",
+				url:window.settings.httpRoot + "api/boxes/" + $(e.target)[0].parentNode.id,
+				success:function(response){
+					if(response){
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+	
+					}
+				}
+			});
+	
+			$.ajax({
+				type:"DELETE",
+				url:window.settings.httpRoot + "api/projects/box/" + $(e.target)[0].parentNode.id,
+				success:function(response){
+					if(response){
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+	
+					}
+				}
+			});
+
+			$.ajax({
+				type:"DELETE",
+				url:window.settings.httpRoot + "api/tags/box/" + $(e.target)[0].parentNode.id,
+				success:function(response){
+					if(response){
+						// window.Application.navigate("home", {trigger: true});
+					} else {
+	
+					}
+				}
+			});
+
+			document.getElementById("popup").className = "hidden";
+			location.reload();
+
+		});
+	
+		popup.getElementsByClassName('no')[0].addEventListener("click", function(o){
+			o.preventDefault();
+			document.getElementById("popup").className = "hidden";
+		});
+
+	},
+
 	initialize: function(){
 
 		this.collection = new BoxCollection();
@@ -101,21 +169,7 @@ var OverviewView = Backbone.View.extend({
 	renderFilteredBoxes: function(boxes){
 		console.log('renderFilteredBoxes');
 		console.log(boxes.length);
-		// if(boxes.length >= 0) {
-		// 	console.log('boxes');
-		// 	for (var i = this.collection.models.length - 1; i >= 0; i--) {
-		// 		// console.log(this.collection.models[i].get('name'));
-		// 		if (this.$el.find('.name').val() === this.collection.models[i].get('name')) {
-		// 			console.log('exists');
-		// 			this.$el.find('.add').hide();
-		// 			return;
-		// 		} else {
-		// 			// console.log('new => add?');
-		// 			this.$el.find('.add').show();
-		// 			continue;
-		// 		}
-		// 	}	
-
+	
 			if(boxes.length <= 0){
 				console.log('new => add?');
 				this.$el.find('.add').show();
@@ -125,13 +179,6 @@ var OverviewView = Backbone.View.extend({
 				this.$el.find('.optionHeader').show();
 				this.$el.find('.add').hide();
 			}
-
-		// }
-
-		for (var i = 0; i < boxes.length; i++) {
-			var input = boxes[i].attributes['name'];
-			// this.renderFilteredStudents(this.collection.filterBoxes(input));
-		}
 
 		this.$boxes.empty();
 		boxes.forEach(this.renderBox, this);

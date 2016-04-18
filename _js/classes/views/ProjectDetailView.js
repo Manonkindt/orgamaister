@@ -37,6 +37,22 @@ var ProjectDetailView = Backbone.View.extend({
 
 		var input = $(e.currentTarget).val().toLowerCase();
 
+		var string = this.model.get('tags_list'),
+    	substring = input;
+
+    	console.log(string, substring);
+
+    	//check if tag exists
+		if(string.indexOf(substring) > -1){
+			this.$el.find('.exist').show();
+			$(".add").prop('disabled', true);
+
+			return;
+		} else {
+			this.$el.find('.exist').hide();
+			$(".add").prop('disabled', false);
+		}
+
     	if (e.keyCode == 13 && this.$el.find('.text').val() !== "") {
 
     		if(input !== " " || input !== "" || input !== undefined){
@@ -238,6 +254,9 @@ var ProjectDetailView = Backbone.View.extend({
 	render: function(){
 		this.$el.html(this.template(this.model.attributes));
 		this.$tag = this.$el.find('.tagresults');
+
+		this.$el.find('.exist').hide();
+
 
 		this.tag.fetch();
 

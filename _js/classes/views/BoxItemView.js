@@ -7,7 +7,7 @@ var BoxItemView = Backbone.View.extend({
 
 	events: {
 		'change .name': 'changeScore',
-		'click .detail': 'clickDetail'		
+		'click .boxdetail': 'clickDetail'		
 	},
 
 	initialize: function(){
