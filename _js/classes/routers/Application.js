@@ -2,7 +2,6 @@ var OverviewView = require('../views/OverviewView.js');
 var BoxDetailView = require('../views/BoxDetailView.js');
 var ProjectDetailView = require('../views/ProjectDetailView.js');
 var IntroView = require('../views/IntroView.js');
-var ListView = require('../views/ListView.js');
 var topPos = $(window).scrollTop();
 
 var Application = Backbone.Router.extend({
@@ -10,7 +9,6 @@ var Application = Backbone.Router.extend({
 	routes: {
 		"overview":"overview",
 		"intro":"intro",
-		"list":"list",
 		"boxes/:id":"boxes",
 		"projects/:id":"projects",
 		"*actions":"default"
@@ -22,12 +20,6 @@ var Application = Backbone.Router.extend({
 
 	default: function(){
 		this.navigate('intro', {trigger: true});
-	},
-
-	list: function(){
-		this.empty();
-		this.list = new ListView();
-		$('.container').append(this.list.render().el);
 	},
 
 	overview: function(){

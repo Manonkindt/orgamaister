@@ -1,7 +1,7 @@
 var BoxCollection = require('../collections/BoxCollection.js');
 var TagCollection = require('../collections/TagCollection.js');
 var ProjectCollection = require('../collections/ProjectCollection.js');
-var StudentItemView = require('./BoxItemView.js');
+var BoxItemView = require('./BoxItemView.js');
 var ProjectItemView = require('./ProjectItemView.js');
 
 var template = require('../../../_hbs/overview.hbs');
@@ -13,7 +13,8 @@ var OverviewView = Backbone.View.extend({
 	className: 'overview',
 
 	events: {
-		'click .add': 'clickAdd',
+		'input .name': 'inputFilter',
+		'click .add' : 'clickAdd',
 		'click .home': 'goHome',
 	},
 
@@ -24,6 +25,23 @@ var OverviewView = Backbone.View.extend({
 		location.reload();
 	},
 
+	inputFilter: function(e){
+		e.preventDefault();
+
+		var input = $(e.currentTarget).val().toLowerCase();
+		if (input !== ""){
+			this.renderFilteredBoxes(this.collection.filterByBox(input));
+
+		} else {
+			
+			this.$el.find('.add').hide();
+			this.$el.find('.optionHeader').show();
+
+			this.array = [];
+			this.collection.fetch();
+		}
+	},
+
 	clickAdd: function(e){
 
 		e.preventDefault();
@@ -31,6 +49,7 @@ var OverviewView = Backbone.View.extend({
 		if(this.$el.find('.name').val() === "" ){
 			return;
 		}
+
 
 		var collect = this.collection;
 		
@@ -58,7 +77,7 @@ var OverviewView = Backbone.View.extend({
 	initialize: function(){
 
 		this.collection = new BoxCollection();
-		this.listenTo(this.collection, 'sync', this.renderStudents);
+		this.listenTo(this.collection, 'sync', this.renderBoxes);
 		this.collection.fetch();
 
 		// this.filtercollection = new TagCollection();
@@ -70,73 +89,73 @@ var OverviewView = Backbone.View.extend({
 		this.projectcollection.fetch();
 	},
 
+	renderBoxes: function(){
+		this.$boxes.empty();
+		this.collection.forEach(this.renderBox, this);
+	},
+
 	onlyUnique: function(value, index, self) { 
-    	return self.indexOf(value) === index;
+    	return self.indexOf(value) == index;
 	},
 
-	renderStudents: function(){
-		this.$students.empty();
-		this.collection.forEach(this.renderStudent, this);
-	},
+	renderFilteredBoxes: function(boxes){
+		console.log('renderFilteredBoxes');
+		console.log(boxes.length);
+		// if(boxes.length >= 0) {
+		// 	console.log('boxes');
+		// 	for (var i = this.collection.models.length - 1; i >= 0; i--) {
+		// 		// console.log(this.collection.models[i].get('name'));
+		// 		if (this.$el.find('.name').val() === this.collection.models[i].get('name')) {
+		// 			console.log('exists');
+		// 			this.$el.find('.add').hide();
+		// 			return;
+		// 		} else {
+		// 			// console.log('new => add?');
+		// 			this.$el.find('.add').show();
+		// 			continue;
+		// 		}
+		// 	}	
 
-	renderFilteredStudents: function(students){
-		this.array.push(students[0].attributes['name']);
-		// console.log(students[0].attributes['name']);
-		// console.log('array = ' + this.array);
+			if(boxes.length <= 0){
+				console.log('new => add?');
+				this.$el.find('.add').show();
+				this.$el.find('.optionHeader').hide();
+			} else if (boxes.length > 0){
+				console.log('exists');
+				this.$el.find('.optionHeader').show();
+				this.$el.find('.add').hide();
+			}
 
+		// }
 
-		for (var i = 0; i < this.array.length; i++) {
-			// array[i]
-			this.$students.empty();
-			var unique = this.array[i].filter( this.onlyUnique );
-			console.log(unique);
-			// this.array[i].forEach(this.renderStudent, this);
-		}
-		// this.$students.empty();
-		
-	},
-
-	renderStudent: function(model){
-
-		var view = new StudentItemView({
-			model: model
-		});
-
-		this.$students.append(view.render().el);
-		
-	},
-
-
-	renderTags: function(){
-		this.$tags.empty();
-		this.projectcollection.forEach(this.renderTag, this);
-	},
-
-	renderFilteredTags: function(tags){
-
-		for (var i = 0; i < tags.length; i++) {
-			var input = tags[i].attributes['box_name'];
+		for (var i = 0; i < boxes.length; i++) {
+			var input = boxes[i].attributes['name'];
 			// this.renderFilteredStudents(this.collection.filterBoxes(input));
 		}
 
-		this.$tags.empty();
-		tags.forEach(this.renderTag, this);
+		this.$boxes.empty();
+		boxes.forEach(this.renderBox, this);
 	},
 
-	renderTag: function(model){
+	renderBox: function(model){
 
-		var view = new ProjectItemView({
+		var view = new BoxItemView({
 			model: model
 		});
 
-		this.$tags.append(view.render().el);
+		this.$boxes.append(view.render().el);
 		
 	},
+
 
 	render: function(){
 
 		this.$el.html(this.template());
-		this.$students = this.$el.find('.box');
+		this.$boxes = this.$el.find('.box');
+
+		this.$el.find('.add').hide();
+		this.$el.find('.optionHeader').show();
+
 
 		this.$tags = this.$el.find('.tag');
 		this.$el.find('.tag').hide();
@@ -144,7 +163,6 @@ var OverviewView = Backbone.View.extend({
 		return this;
 
 	}
-	
 });
 
 module.exports = OverviewView;

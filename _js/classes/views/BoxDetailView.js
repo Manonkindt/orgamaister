@@ -11,7 +11,7 @@ var BoxDetailView = Backbone.View.extend({
 	className: 'dozen',
 	
 	events: {
-		'click .delete': 'clickDelete',
+		'click .gone': 'clickDelete',
 		'click .addproject': 'clickAddproject',
 		'click .home': 'goHome',
 		'click .over': 'goOverview'
@@ -63,20 +63,25 @@ var BoxDetailView = Backbone.View.extend({
 	clickDelete: function(e){
 		e.preventDefault();
 
+		console.log('delete this project and all his tags');
+
 		document.getElementById("popup").className = "";
 
 		var popup = document.getElementById("popup");
 
 		var deletemodel = this.model;
 
+		console.log($(e.target)[0].parentNode.id);
+		var name = $(e.target)[0].parentNode.parentNode.getElementsByTagName('h2')[0].innerHTML
+
+		document.querySelectorAll('#popup span')[0].innerHTML = name;
+
 		popup.getElementsByClassName('go')[0].addEventListener("click", function(a){
 			a.preventDefault();
-
-			deletemodel.destroy();
-
+			
 			$.ajax({
 				type:"DELETE",
-				url:window.settings.httpRoot + "api/projects/box/" + deletemodel.get('id'),
+				url:window.settings.httpRoot + "api/projects/" + $(e.target)[0].parentNode.id,
 				success:function(response){
 					if(response){
 						// window.Application.navigate("home", {trigger: true});
@@ -88,7 +93,7 @@ var BoxDetailView = Backbone.View.extend({
 	
 			$.ajax({
 				type:"DELETE",
-				url:window.settings.httpRoot + "api/tags/box/" + deletemodel.get('id'),
+				url:window.settings.httpRoot + "api/tags/project/" + $(e.target)[0].parentNode.id,
 				success:function(response){
 					if(response){
 						// window.Application.navigate("home", {trigger: true});

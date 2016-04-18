@@ -1,16 +1,16 @@
-<a href="#" class="detail">
-	<h2>{{box_name}}</h2>
-	<h3>{{name}}</h3>
-	<p>{{tags_list}}</p>
-</a>
+<a href="#" class="box_detail"><h2>{{box_name}}</h2></a>
+<a href="#" class="proj_detail"><h3>{{name}}</h3>
+<p>{{tags_list}}</p></a>
 
-<a href="#" class="tagdetail">
-	<h2>{{name}}</h2>
-	<h3>
-		tags
-		<img src="assets/arrow_green.svg" alt=""/>
+<div class="tagdetail">
+	<a href="#" class="boxdetail"><h2>{{name}}</h2></a>
+	<a href="#" id="{{id}}" class="gone">
+		<img src="assets/close.svg" alt=""/>
+	</a>
+	<h3>tags
+		{{!-- <img src="assets/arrow_green.svg" alt=""/> --}}
 	</h3>
-</a>
+</div>
 
 <a href="#" class="listdetail">
 	<h2>{{name}}</h2>
