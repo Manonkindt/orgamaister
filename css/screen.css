@@ -173,8 +173,23 @@ html {
   font-size: 3em;
   text-align: center;
 }
+/* line 96, ../_scss/_start.scss */
+.intro .header aside a,
+.intro .header aside a p,
+.overview .header aside a,
+.overview .header aside a p,
+.listview .header aside a,
+.listview .header aside a p,
+.dozen .header aside a,
+.dozen .header aside a p {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  color: #5cd8af;
+  text-transform: uppercase;
+}
 
-/* line 99, ../_scss/_start.scss */
+/* line 108, ../_scss/_start.scss */
 .tags .optionHeader, .feedback .optionHeader, .overview .optionHeader, .listview .optionHeader {
   margin-top: 150px;
   margin-bottom: -22px;
@@ -183,7 +198,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 109, ../_scss/_start.scss */
+/* line 118, ../_scss/_start.scss */
 .tags .optionHeader h1, .feedback .optionHeader h1, .overview .optionHeader h1, .listview .optionHeader h1 {
   border-bottom: 3px solid black;
   font-size: 4.8em;
@@ -192,35 +207,35 @@ html {
   font-family: vollkornregular;
   color: black;
 }
-/* line 117, ../_scss/_start.scss */
+/* line 126, ../_scss/_start.scss */
 .tags .optionHeader h1 span, .feedback .optionHeader h1 span, .overview .optionHeader h1 span, .listview .optionHeader h1 span {
   color: #5cd8af;
 }
-/* line 122, ../_scss/_start.scss */
+/* line 131, ../_scss/_start.scss */
 .tags .optionHeader hr, .feedback .optionHeader hr, .overview .optionHeader hr, .listview .optionHeader hr {
   width: 100%;
   border-bottom: 0px solid rgba(0, 0, 0, 0.6);
 }
 
-/* line 129, ../_scss/_start.scss */
+/* line 138, ../_scss/_start.scss */
 header h1,
 header img {
   margin: 0;
 }
 
-/* line 134, ../_scss/_start.scss */
+/* line 143, ../_scss/_start.scss */
 header h1 {
   font-family: vollkornsemibold;
 }
 
-/* line 138, ../_scss/_start.scss */
+/* line 147, ../_scss/_start.scss */
 h2 span {
   color: #5cd8af;
   font-size: 1.3em;
   font-family: vollkornregular;
 }
 
-/* line 144, ../_scss/_start.scss */
+/* line 153, ../_scss/_start.scss */
 .dozen .detail,
 .dozen .listdetail,
 .dozen .box_detail,
@@ -235,7 +250,7 @@ h2 span {
   display: none;
 }
 
-/* line 158, ../_scss/_start.scss */
+/* line 167, ../_scss/_start.scss */
 .intro .header aside,
 .overview .header aside,
 .listview .header aside,
@@ -245,25 +260,25 @@ h2 span {
   margin-top: 40px;
 }
 
-/* line 167, ../_scss/_start.scss */
+/* line 176, ../_scss/_start.scss */
 .lamp {
   width: 75%;
   transition: 0.5s;
 }
 
-/* line 173, ../_scss/_start.scss */
+/* line 182, ../_scss/_start.scss */
 .header.white {
   position: relative;
   color: black;
 }
-/* line 176, ../_scss/_start.scss */
+/* line 185, ../_scss/_start.scss */
 .header.white .lamp {
   margin-top: -25px;
   width: 100%;
   z-index: 20;
   top: 0;
 }
-/* line 184, ../_scss/_start.scss */
+/* line 193, ../_scss/_start.scss */
 .header.white .blur {
   position: absolute;
   z-index: 1;
@@ -277,14 +292,14 @@ h2 span {
   -webkit-filter: blur(55px);
   -webkit-transition: -webkit-filter .5s;
 }
-/* line 200, ../_scss/_start.scss */
+/* line 209, ../_scss/_start.scss */
 .header.white div {
   background-color: black;
   min-width: 20px;
   min-height: 20px;
 }
 
-/* line 223, ../_scss/_start.scss */
+/* line 232, ../_scss/_start.scss */
 .intro header h1,
 .listview header h1,
 .overview header h1,
@@ -294,7 +309,7 @@ h2 span {
   justify-content: center;
   align-items: center;
 }
-/* line 234, ../_scss/_start.scss */
+/* line 243, ../_scss/_start.scss */
 .intro header h1 div,
 .listview header h1 div,
 .overview header h1 div,
@@ -306,51 +321,51 @@ h2 span {
   margin: 0 15px;
 }
 
-/* line 244, ../_scss/_start.scss */
+/* line 253, ../_scss/_start.scss */
 .intro header h1 {
   margin-top: -180px;
 }
 
-/* line 248, ../_scss/_start.scss */
+/* line 257, ../_scss/_start.scss */
 .overview header h1,
 .listview header h1 {
   margin-top: -10px;
 }
 
-/* line 254, ../_scss/_start.scss */
+/* line 263, ../_scss/_start.scss */
 header {
   margin-bottom: 20px;
 }
 
-/* line 258, ../_scss/_start.scss */
+/* line 267, ../_scss/_start.scss */
 .feedback .field {
   margin: 30px 20px;
 }
 
-/* line 262, ../_scss/_start.scss */
+/* line 271, ../_scss/_start.scss */
 .dozen .tags .tagresults h2,
 .feedback .results h3 {
   display: none;
 }
 
-/* line 271, ../_scss/_start.scss */
+/* line 280, ../_scss/_start.scss */
 .dozen h3 {
   display: block;
 }
 
-/* line 275, ../_scss/_start.scss */
+/* line 284, ../_scss/_start.scss */
 .results {
   clear: both;
   margin: 20px;
 }
 
-/* line 280, ../_scss/_start.scss */
+/* line 289, ../_scss/_start.scss */
 em {
   background-image: url("../assets/close.svg");
   background-size: 226px 215px;
 }
 
-/* line 285, ../_scss/_start.scss */
+/* line 294, ../_scss/_start.scss */
 .inputwrapper span,
 .inputwrapper .item {
   font-size: 2em;
@@ -359,7 +374,7 @@ em {
   font-family: vollkornregular;
 }
 
-/* line 299, ../_scss/_start.scss */
+/* line 308, ../_scss/_start.scss */
 .inputwrapper span.remove {
   background-image: url("../assets/close.svg");
   background-repeat: no-repeat;
@@ -369,7 +384,7 @@ em {
   margin-left: -3px;
 }
 
-/* line 308, ../_scss/_start.scss */
+/* line 317, ../_scss/_start.scss */
 .taglist {
   height: 75px;
   display: block;
@@ -384,11 +399,11 @@ em {
   text-decoration: none;
   border: none;
 }
-/* line 322, ../_scss/_start.scss */
+/* line 331, ../_scss/_start.scss */
 .taglist::-webkit-scrollbar {
   display: none;
 }
-/* line 326, ../_scss/_start.scss */
+/* line 335, ../_scss/_start.scss */
 .taglist li {
   height: 100%;
   display: flex;
@@ -399,17 +414,17 @@ em {
   flex-wrap: nowrap;
 }
 
-/* line 337, ../_scss/_start.scss */
+/* line 346, ../_scss/_start.scss */
 .inputwrapper {
   margin: 8px;
 }
 
-/* line 341, ../_scss/_start.scss */
+/* line 350, ../_scss/_start.scss */
 .inputwrapper span {
   margin-bottom: 10px;
 }
 
-/* line 345, ../_scss/_start.scss */
+/* line 354, ../_scss/_start.scss */
 .inputwrap {
   left: 0;
   overflow: visible;
@@ -421,17 +436,17 @@ em {
   margin-bottom: 30px;
   display: block;
 }
-/* line 356, ../_scss/_start.scss */
+/* line 365, ../_scss/_start.scss */
 .inputwrap .item.input input {
   margin: 0;
 }
 
-/* line 361, ../_scss/_start.scss */
+/* line 370, ../_scss/_start.scss */
 .input {
   width: 100%;
 }
 
-/* line 366, ../_scss/_start.scss */
+/* line 375, ../_scss/_start.scss */
 input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #828282;
@@ -439,7 +454,7 @@ input::-webkit-input-placeholder {
   padding-left: 14px;
 }
 
-/* line 372, ../_scss/_start.scss */
+/* line 381, ../_scss/_start.scss */
 input::-moz-placeholder {
   /* Firefox 19+ */
   color: #828282;
@@ -447,7 +462,7 @@ input::-moz-placeholder {
   padding-left: 14px;
 }
 
-/* line 378, ../_scss/_start.scss */
+/* line 387, ../_scss/_start.scss */
 input:-ms-input-placeholder {
   /* IE 10+ */
   color: #828282;
@@ -455,14 +470,14 @@ input:-ms-input-placeholder {
   padding-left: 14px;
 }
 
-/* line 384, ../_scss/_start.scss */
+/* line 393, ../_scss/_start.scss */
 input[placeholder] {
   color: #828282;
   font-size: 45px;
   padding-left: 14px;
 }
 
-/* line 389, ../_scss/_start.scss */
+/* line 398, ../_scss/_start.scss */
 ::-moz-placeholder {
   color: #828282;
   font-size: 5em;
@@ -470,14 +485,14 @@ input[placeholder] {
 }
 
 /* firefox 19+ */
-/* line 395, ../_scss/_start.scss */
+/* line 404, ../_scss/_start.scss */
 input:-moz-placeholder {
   color: #828282;
   font-size: 45px;
   padding-left: 14px;
 }
 
-/* line 401, ../_scss/_start.scss */
+/* line 410, ../_scss/_start.scss */
 input:-moz-placeholder {
   /* Firefox 18- */
   color: #828282;
@@ -485,13 +500,13 @@ input:-moz-placeholder {
   padding-left: 14px;
 }
 
-/* line 407, ../_scss/_start.scss */
+/* line 416, ../_scss/_start.scss */
 .errortext {
   text-align: center;
   color: white;
 }
 
-/* line 412, ../_scss/_start.scss */
+/* line 421, ../_scss/_start.scss */
 .follower {
   position: relative;
   background-color: black;
@@ -501,56 +516,56 @@ input:-moz-placeholder {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 421, ../_scss/_start.scss */
+/* line 430, ../_scss/_start.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 426, ../_scss/_start.scss */
+/* line 435, ../_scss/_start.scss */
 body {
   line-height: 1;
 }
 
-/* line 430, ../_scss/_start.scss */
+/* line 439, ../_scss/_start.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 434, ../_scss/_start.scss */
+/* line 443, ../_scss/_start.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 438, ../_scss/_start.scss */
+/* line 447, ../_scss/_start.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 443, ../_scss/_start.scss */
+/* line 452, ../_scss/_start.scss */
 .students {
   width: 100%;
 }
 
-/* line 447, ../_scss/_start.scss */
+/* line 456, ../_scss/_start.scss */
 td,
 th {
   text-align: left;
   padding: 10px;
 }
 
-/* line 453, ../_scss/_start.scss */
+/* line 462, ../_scss/_start.scss */
 h1 {
   font-size: 1.5em;
 }
 
-/* line 457, ../_scss/_start.scss */
+/* line 466, ../_scss/_start.scss */
 th {
   font-weight: bold;
 }
 
-/* line 461, ../_scss/_start.scss */
+/* line 470, ../_scss/_start.scss */
 .filter,
 .name {
   font-size: 1.5em;
@@ -563,7 +578,7 @@ th {
   width: 100%;
 }
 
-/* line 473, ../_scss/_start.scss */
+/* line 482, ../_scss/_start.scss */
 form {
   display: block;
   margin-left: auto;
@@ -574,7 +589,7 @@ form {
   position: relative;
   z-index: 13000;
 }
-/* line 483, ../_scss/_start.scss */
+/* line 492, ../_scss/_start.scss */
 form h2 {
   border-bottom: 3px solid black;
   font-size: 4.7em;
@@ -582,19 +597,19 @@ form h2 {
   text-transform: uppercase;
   font-family: vollkornregular;
 }
-/* line 491, ../_scss/_start.scss */
+/* line 500, ../_scss/_start.scss */
 form .name {
   margin: 60px 0px;
   width: 100%;
   height: 75px;
 }
 
-/* line 498, ../_scss/_start.scss */
+/* line 507, ../_scss/_start.scss */
 .overview form {
   margin-top: 0px !important;
 }
 
-/* line 502, ../_scss/_start.scss */
+/* line 511, ../_scss/_start.scss */
 .add {
   display: block;
   margin-right: auto;
@@ -606,33 +621,33 @@ form .name {
   font-family: vollkornregular;
 }
 
-/* line 513, ../_scss/_start.scss */
+/* line 522, ../_scss/_start.scss */
 .dozen > .delete {
   margin-top: 10px;
   display: block;
 }
 
-/* line 518, ../_scss/_start.scss */
+/* line 527, ../_scss/_start.scss */
 .feedback {
   margin-top: 20px;
 }
 
-/* line 522, ../_scss/_start.scss */
+/* line 531, ../_scss/_start.scss */
 .addfeedback {
   margin-top: 10px;
 }
 
-/* line 526, ../_scss/_start.scss */
+/* line 535, ../_scss/_start.scss */
 li {
   margin-top: 5px;
 }
 
-/* line 530, ../_scss/_start.scss */
+/* line 539, ../_scss/_start.scss */
 .feedback ul {
   margin-top: 20px;
 }
 
-/* line 534, ../_scss/_start.scss */
+/* line 543, ../_scss/_start.scss */
 #popup {
   position: absolute;
   z-index: 15000;
@@ -643,7 +658,7 @@ li {
   vertical-align: middle;
   text-align: center;
 }
-/* line 545, ../_scss/_start.scss */
+/* line 554, ../_scss/_start.scss */
 #popup div {
   display: inline-block;
   width: 100%;
@@ -651,7 +666,7 @@ li {
   background-color: #fff;
   margin-top: 34vh;
 }
-/* line 552, ../_scss/_start.scss */
+/* line 561, ../_scss/_start.scss */
 #popup div h2 {
   text-align: center;
   vertical-align: middle;
@@ -668,7 +683,7 @@ li {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-/* line 569, ../_scss/_start.scss */
+/* line 578, ../_scss/_start.scss */
 #popup div a {
   font-family: vollkornsemibold;
   text-decoration: none;
@@ -677,12 +692,12 @@ li {
   text-transform: uppercase;
   margin: 0 20px;
 }
-/* line 578, ../_scss/_start.scss */
+/* line 587, ../_scss/_start.scss */
 #popup div a:hover {
   color: #5cd8af;
 }
 
-/* line 584, ../_scss/_start.scss */
+/* line 593, ../_scss/_start.scss */
 .scroll_down {
   display: block;
   margin-right: auto;
@@ -695,18 +710,18 @@ li {
   bottom: 10px;
 }
 
-/* line 596, ../_scss/_start.scss */
+/* line 605, ../_scss/_start.scss */
 a {
   text-decoration: none;
 }
 
-/* line 600, ../_scss/_start.scss */
+/* line 609, ../_scss/_start.scss */
 .hidden,
 .hiddenbutton {
   display: none;
 }
 
-/* line 606, ../_scss/_start.scss */
+/* line 615, ../_scss/_start.scss */
 .header h1.home {
   cursor: pointer;
 }

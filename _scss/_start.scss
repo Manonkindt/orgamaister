@@ -92,6 +92,15 @@ html {
       font-size: 3em;
       text-align: center;
     }
+
+    aside a, 
+    aside a p {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      color: $blue;
+      text-transform: uppercase;
+    }
   }
 }
 
