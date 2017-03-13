@@ -16,7 +16,8 @@ var ProjectDetailView = Backbone.View.extend({
 		'click .add': 'clickAdd',
 		'keydown .text': 'addTags',
 		'click .home': 'goHome',
-		'click .gotomybox': 'gotomybox'
+		'click .gotomybox': 'gotomybox',
+		'keydown #changedtoinput': 'changeTags',
 	},
 
 	array: [],
@@ -31,6 +32,24 @@ var ProjectDetailView = Backbone.View.extend({
 	gotomybox: function(e) {
 		e.preventDefault();
 		Window.Application.navigate("boxes/" + this.model.get('box_id'), {trigger: true});
+	},
+
+	changeTags: function(e){
+		var input = $(e.currentTarget).val().toLowerCase();
+		var whatiswas = this.$el.find('#changedtoinput')[0].defaultValue;
+		if (e.keyCode == 13 && this.$el.find('#changedtoinput').val() !== "") {
+			var test = this.array;
+			var updateitem = this.tag;
+			var modeeel = this.model;
+
+    		if(input !== " " || input !== "" || input !== undefined){
+
+            	if (modeeel.set('tags_list', modeeel.get('tags_list').replace(whatiswas, input)) ){
+					modeeel.save();
+            		location.reload();
+            	}
+    		}
+    	}
 	},
 
 	addTags: function(e){
